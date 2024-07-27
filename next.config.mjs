@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import createNextIntlPlugin from "next-intl/plugin";
 
-export default nextConfig;
+const withNextIntl = createNextIntlPlugin();
+
+const nextConfig = {
+	i18n: {
+		locales: ["de-AT"],
+		defaultLocale: "de-AT",
+	},
+};
+
+export default withNextIntl(nextConfig);
