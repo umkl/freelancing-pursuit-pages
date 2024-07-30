@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import tags from "@/data/tags.json";
 
 export default function Home() {
 	const t = useTranslations("/");
@@ -28,6 +29,11 @@ export default function Home() {
 							}
 						})}
 				</p>
+				<div>
+					{tags.map((content, key) => (
+						<div key={key}>{content}</div>
+					))}
+				</div>
 			</section>
 		</main>
 	);
