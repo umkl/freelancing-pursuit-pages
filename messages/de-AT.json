@@ -1,12 +1,17 @@
 {
 	"/": {
-		"ad-text-1": "HoL DIR DAS KOMPLETTE LANDING UPGRADE FÜR ENTSPANNTE 300€!",
+		"ad-text": "HoL DIR DAS KOMPLETTE LANDING UPGRADE FÜR ENTSPANNTE 300€!",
 		"greeting": "Servus! I bin da",
 		"name": "Michael Ungar",
 		"jobs": {
 			"webdev": "Web Developer",
 			"ux": "UX Designer"
 		},
-		"mission": "Mit [Code] & [Design] versuche ich die digitale Welt sukzessive schöner zu machen."
+		"mission": "Mit [Code] & [Design] versuche ich die digitale Welt sukzessive schöner zu machen.",
+		"major-links": {
+			"projects": "Projekte",
+			"services": "Dienstleistungen",
+			"contact": "Kontakt"
+		}
 	}
 }

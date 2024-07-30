@@ -7,7 +7,7 @@ export default function Home() {
 
 	return (
 		<main>
-			<header>{t("ad-text-1")}</header>
+			<header>{t("ad-text")}</header>
 			<section>
 				<p>{t("greeting")}</p>
 				<p>Michael Ungar</p>
@@ -34,6 +34,11 @@ export default function Home() {
 						<div key={key}>{content}</div>
 					))}
 				</div>
+				<ul>
+					{["projects", "services", "contact"].map((key) => (
+						<li key={key}>{t("major-links." + key)}</li>
+					))}
+				</ul>
 			</section>
 		</main>
 	);
