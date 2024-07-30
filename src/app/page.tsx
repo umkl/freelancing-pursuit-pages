@@ -39,6 +39,12 @@ export default function Home() {
 						<li key={key}>{t("major-links." + key)}</li>
 					))}
 				</ul>
+				<Image
+					src={"/imgs/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg"}
+					alt={"Image from Gabriel Garcia Marengo of Mountains."}
+					width={"500"}
+					height={"400"}
+				></Image>
 			</section>
 		</main>
 	);
