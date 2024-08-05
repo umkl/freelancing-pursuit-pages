@@ -40,6 +40,7 @@ export default function Home() {
 					))}
 				</ul>
 				<Image
+					className="w-[400px] cover"
 					src={"/imgs/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg"}
 					alt={"Image from Gabriel Garcia Marengo of Mountains."}
 					width={"500"}
