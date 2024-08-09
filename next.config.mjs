@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import { dir } from "console";
 import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin();

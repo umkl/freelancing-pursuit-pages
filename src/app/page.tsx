@@ -8,7 +8,7 @@ export default function Home() {
 	return (
 		<main>
 			<header>{t("ad-text")}</header>
-			<section>
+			<section className="">
 				<p>{t("greeting")}</p>
 				<p>Michael Ungar</p>
 				<ul>

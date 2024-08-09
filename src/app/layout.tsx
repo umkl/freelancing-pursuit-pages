@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
+import Footer from "@/comps/footer";
+import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,12 +25,13 @@ export default async function RootLayout({
 
 	return (
 		<html lang={locale}>
-			<body className={inter.className + " min-h-screen"}>
-				{" "}
-				<NextIntlClientProvider messages={messages}>
+			<NextIntlClientProvider messages={messages}>
+				<body className={inter.className + " min-h-screen flex flex-col"}>
 					{children}
-				</NextIntlClientProvider>
-			</body>
+					<div className="flex-1"></div>
+					<Footer />
+				</body>
+			</NextIntlClientProvider>
 		</html>
 	);
 }

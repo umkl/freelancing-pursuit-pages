@@ -1,8 +1,10 @@
+"use client";
+
 const Footer = () => {
 	return (
-		<footer>
+		<footer className=" flex justify-between">
 			<div>impressum</div>
-			<div>flag</div>
+			<div>ffflag</div>
 		</footer>
 	);
 };
