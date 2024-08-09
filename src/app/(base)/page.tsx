@@ -10,7 +10,7 @@ export default function Home() {
 			<header>{t("ad-text")}</header>
 			<section className="">
 				<p>{t("greeting")}</p>
-				<p>Michael Ungar</p>
+				<p className="font-clash">Michael Ungar</p>
 				<ul>
 					{["webdev", "ux"].map((key) => (
 						<li key={key}>{t("jobs." + key)}</li>
