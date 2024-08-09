@@ -12,6 +12,19 @@ const config: Config = {
 				druk: ["var(--font-druk)"],
 				clash: ["var(--font-clash)"],
 			},
+			colors: {
+				neutral: {
+					900: "#222222",
+					800: "#303030",
+					700: "#494949",
+					600: "#626262",
+					500: "#858585",
+					400: "#A0A0A0",
+					300: "#B2B2B2",
+					200: "#D6D6D6",
+					100: "#EEEEEE",
+				},
+			},
 			backgroundImage: {
 				"gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
 				"gradient-conic":
