@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import tags from "@/data/tags.json";
+import Arrow from "@/svgs/arrow.svg";
 
 export default function Home() {
 	const t = useTranslations("/");
@@ -53,9 +54,10 @@ export default function Home() {
 					{["projects", "services", "contact"].map((key) => (
 						<li
 							key={key}
-							className="text-xlp leading-none font-clash font-bold uppercase mb-4"
+							className="text-xlp leading-none font-clash font-bold uppercase mb-4 flex items-center"
 						>
 							{t("major-links." + key)}
+							<Arrow className="inline-block ml-[9px] scale-[163%] mb-[1.8px] fill-neutral-900" />
 						</li>
 					))}
 				</ul>
