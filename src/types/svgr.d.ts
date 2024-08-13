@@ -1,6 +1,10 @@
 declare module "*.svg" {
 	import { FC, SVGProps } from "react";
-	const content: FC<SVGProps<SVGElement>>;
+	interface SVGWithClassNameProps extends SVGProps<SVGElement> {
+		className?: string;
+	}
+
+	const content: FC<SVGWithClassNameProps>;
 	export default content;
 }
 
