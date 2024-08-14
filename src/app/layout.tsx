@@ -1,15 +1,24 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages } from "next-intl/server";
-import Footer from "@/comps/footer";
+import ImpressumLangFooter from "@/comps/footer";
 
 import "@/styles/globals.css";
 import { cn } from "@/utils/cn";
 import { clash, inter } from "@/fonts";
+import config from "../../tailwind.config";
 
 export const metadata: Metadata = {
 	title: "",
 	description: "",
+};
+
+export const viewport: Viewport = {
+	// themeColor: config.theme?.extend?.colors.neutral
+	initialScale: 1,
+	maximumScale: 1,
+	width: "device-width",
+	userScalable: false,
 };
 
 export default async function RootLayout({
@@ -27,12 +36,12 @@ export default async function RootLayout({
 					className={cn(
 						inter.className,
 						clash.variable,
-						"min-h-screen flex flex-col"
+						"min-h-screen flex flex-col min-w-[400px]"
 					)}
 				>
 					{children}
 					<div className="flex-1"></div>
-					<Footer />
+					<ImpressumLangFooter />
 				</body>
 			</NextIntlClientProvider>
 		</html>

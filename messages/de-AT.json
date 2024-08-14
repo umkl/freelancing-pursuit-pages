@@ -14,5 +14,8 @@
 			"services": "Dienstleistungen",
 			"contact": "Kontakt"
 		}
+	},
+	"/impressum": {
+		"go-back": "Zurück"
 	}
 }
