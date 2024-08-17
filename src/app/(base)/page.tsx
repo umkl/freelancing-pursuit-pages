@@ -7,8 +7,8 @@ import { Routes } from "@/types/routes";
 export default function Home() {
 	const t = useTranslations(Routes.root);
 	return (
-		<section>
-			<p className="text-lgp font-bold italic uppercase mt-2">
+		<section className="mx-4">
+			<p className="text-lgp font-bold uppercase italic mt-2">
 				{t("greeting")}
 			</p>
 			<p className="text-2xl leading-none font-clash font-bold uppercase">
@@ -44,7 +44,7 @@ export default function Home() {
 				{tags.map((content, key) => (
 					<div
 						key={key}
-						className="text-base font-clash font-semibold rounded-full px-4 py-1 border-[0.2rem] uppercase border-neutral-800"
+						className="text-base font-clash font-semibold rounded-full px-4 py-1 border-[0.2rem] uppercase border-neutral-800 dark:border-neutral-200"
 					>
 						{content}
 					</div>
@@ -65,8 +65,8 @@ export default function Home() {
 				className="w-full h-[700px] object-cover"
 				src={"/imgs/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg"}
 				alt={"Image from Gabriel Garcia Marengo of Mountains."}
-				width={"500"}
-				height={"400"}
+				width={"3000"}
+				height={"2400"}
 			></Image>
 		</section>
 	);

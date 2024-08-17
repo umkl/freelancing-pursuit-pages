@@ -9,7 +9,7 @@
 	min-width: var(--sm);
 	-webkit-font-smoothing: antialiased;
 	font-smooth: auto;
-	font-synthesis: none;
+	font-synthesis: style;
 	text-rendering: optimizeLegibility;
 }
 
