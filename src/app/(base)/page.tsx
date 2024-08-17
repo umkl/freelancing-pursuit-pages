@@ -7,7 +7,7 @@ import { Routes } from "@/types/routes";
 export default function Home() {
 	const t = useTranslations(Routes.root);
 	return (
-		<section className="text-neutral-900 ">
+		<section>
 			<p className="text-lgp font-bold italic uppercase mt-2">
 				{t("greeting")}
 			</p>
@@ -57,7 +57,7 @@ export default function Home() {
 						className="text-xlp leading-none font-clash font-bold uppercase mb-4 flex items-center justify-start w-fit"
 					>
 						{t("major-links." + key)}
-						<Arrow className="inline-block ml-[9px] scale-[163%] mb-[1.8px] fill-neutral-900" />
+						<Arrow className="inline-block ml-[9px] scale-[163%] mb-[1.8px] fill-neutral-900 dark:fill-neutral-100" />
 					</li>
 				))}
 			</ul>

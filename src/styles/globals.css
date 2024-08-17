@@ -8,6 +8,9 @@
 	font-size: 16px; /* base font-size */
 	min-width: var(--sm);
 	-webkit-font-smoothing: antialiased;
+	font-smooth: auto;
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
 }
 
 @media (prefers-color-scheme: dark) {
