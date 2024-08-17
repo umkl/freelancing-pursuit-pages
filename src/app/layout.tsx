@@ -16,9 +16,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
 	// themeColor: config.theme?.extend?.colors.neutral
 	initialScale: 1,
-	maximumScale: 1,
 	width: "device-width",
-	userScalable: false,
 };
 
 export default async function RootLayout({
@@ -36,7 +34,7 @@ export default async function RootLayout({
 					className={cn(
 						inter.className,
 						clash.variable,
-						"min-h-screen flex flex-col min-w-[400px]"
+						"min-h-screen max-w- flex flex-col"
 					)}
 				>
 					{children}

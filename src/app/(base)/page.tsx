@@ -7,7 +7,7 @@ import { Routes } from "@/types/routes";
 export default function Home() {
 	const t = useTranslations(Routes.root);
 	return (
-		<section className="mx-4 text-neutral-900 ">
+		<section className="text-neutral-900 ">
 			<p className="text-lgp font-bold italic uppercase mt-2">
 				{t("greeting")}
 			</p>
