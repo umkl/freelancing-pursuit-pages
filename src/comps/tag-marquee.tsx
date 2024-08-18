@@ -1,7 +1,9 @@
+"use client";
 import tags from "@/data/tags.json";
 import useViewportWidth from "@/utils/hooks/useViewportWidth";
 import Marquee from "react-fast-marquee";
 import sizes from "@/data/sizes.json";
+import { cn } from "@/utils/cn";
 
 const TagMarquee = () => {
 	const width = useViewportWidth();
@@ -20,7 +22,11 @@ const TagMarquee = () => {
 	});
 
 	const Component = isSmall ? Marquee : "div";
-	return <Component className="flex">{content}</Component>;
+	return (
+		<div className={cn(isSmall ? "-mx-4" : "mx-0")}>
+			<Component className={cn("flex mt-4")}>{content}</Component>
+		</div>
+	);
 };
 
 export default TagMarquee;

@@ -4,9 +4,11 @@ import Image from "next/image";
 
 import Arrow from "@/svgs/arrow.svg";
 import { Routes } from "@/types/routes";
-import Marquee from "react-fast-marquee";
+
 import useViewportWidth from "@/utils/hooks/useViewportWidth";
-import TagMarquee from "@/comps/tag-marquee";
+import dynamic from "next/dynamic";
+const TagMarquee = dynamic(() => import("@/comps/tag-marquee"), { ssr: false });
+// import TagMarquee from "@/comps/tag-marquee";
 
 export default function Home() {
 	const t = useTranslations(Routes.root);
@@ -45,9 +47,9 @@ export default function Home() {
 						}
 					})}
 			</p>
-			<div className="-mx-4 mt-4">
-				<TagMarquee />
-			</div>
+
+			<TagMarquee />
+
 			<ul className="mt-4 scale-50 w-full  origin-bottom-left">
 				{["projects", "services", "contact"].map((key) => (
 					<li
