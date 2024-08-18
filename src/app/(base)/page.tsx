@@ -54,7 +54,7 @@ export default function Home() {
 				<TagMarquee />
 			</div>
 			<div className="relative flex-1">
-				<ul className="mt-4 scale-50 laptop:scale-75 w-full origin-bottom-left laptop:absolute laptop:bottom-0 z-10">
+				<ul className="mt-4 scale-50 laptop:scale-100 w-full origin-bottom-left laptop:absolute laptop:bottom-0 z-10">
 					{["projects", "services", "contact"].map((key) => (
 						<li
 							key={key}
