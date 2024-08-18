@@ -14,41 +14,43 @@ export default function Home() {
 	const t = useTranslations(Routes.root);
 
 	return (
-		<section className="mx-4">
-			<p className="text-lgp font-bold uppercase italic mt-2">
-				{t("greeting")}
-			</p>
-			<p className="text-xlpp md:text-2xl leading-none font-clash font-bold uppercase">
-				Michael <br /> Ungar
-			</p>
-			<ul className="text-xl leading-none font-bold mt-2">
-				{["webdev", "ux"].map((key) => (
-					<li key={key} className="mt-2">
-						{t("jobs." + key)}
-					</li>
-				))}
-			</ul>
-			<p className="flex items-center gap-1 mt-2 ml-2">
-				<span className="inline-block bg-green-800 rounded-full w-2 h-2 mr-1 shrink-0"></span>
-				<span className="font-bold text-base md:text-md text-nowrap">
-					{t("avail-status")}
-				</span>
-			</p>
-			<p className="text-md font-bold italic mt-2 max-w-sm">
-				{t("mission")
-					.split(/(\[Code\]|\[Design\])/)
-					.map((part, index) => {
-						if (part === "[Code]") {
-							return <span key={index}>Code</span>;
-						} else if (part === "[Design]") {
-							return <span key={index}>Design</span>;
-						} else {
-							return <span key={index}>{part}</span>;
-						}
-					})}
-			</p>
+		<section className="mx-4 tablet:mx-8 tablet:mt-4">
+			<div className="tablet:mx-4 tablet:mt-8">
+				<p className="text-lgp font-bold uppercase italic mt-2">
+					{t("greeting")}
+				</p>
+				<p className="text-xlpp md:text-2xl leading-none font-clash font-bold uppercase">
+					Michael <br className="tablet:hidden" /> Ungar
+				</p>
+				<ul className="text-xl leading-none font-bold mt-2">
+					{["webdev", "ux"].map((key) => (
+						<li key={key} className="mt-2">
+							{t("jobs." + key)}
+						</li>
+					))}
+				</ul>
+				<p className="flex items-center gap-1 mt-2 ml-2">
+					<span className="inline-block bg-green-800 rounded-full w-2 h-2 mr-1 shrink-0"></span>
+					<span className="font-bold text-base md:text-md text-nowrap">
+						{t("avail-status")}
+					</span>
+				</p>
+				<p className="text-md  tablet:text-lg font-bold italic mt-2 max-w-sm tablet:max-w-lg">
+					{t("mission")
+						.split(/(\[Code\]|\[Design\])/)
+						.map((part, index) => {
+							if (part === "[Code]") {
+								return <span key={index}>Code</span>;
+							} else if (part === "[Design]") {
+								return <span key={index}>Design</span>;
+							} else {
+								return <span key={index}>{part}</span>;
+							}
+						})}
+				</p>
 
-			<TagMarquee />
+				<TagMarquee />
+			</div>
 
 			<ul className="mt-4 scale-50 w-full  origin-bottom-left">
 				{["projects", "services", "contact"].map((key) => (

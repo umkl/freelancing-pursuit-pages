@@ -13,7 +13,7 @@ const TagMarquee = () => {
 			return (
 				<div
 					key={`${i}-${key}-${content}`}
-					className="text-base font-clash font-semibold rounded-full px-4 py-1 border-[0.2rem] uppercase border-neutral-800 dark:border-neutral-200 mr-2"
+					className="text-base font-clash font-bold rounded-full px-4 py-1 border-[0.2rem] uppercase border-neutral-800 dark:border-neutral-200 mr-2"
 				>
 					{content}
 				</div>

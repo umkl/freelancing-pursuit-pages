@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 const ImpressumLangFooter = () => {
 	const router = useRouter();
 	return (
-		<footer className="flex justify-between items-center font-inter capitalize m-4 font-bold text-base">
+		<footer className="flex justify-between items-center font-inter capitalize m-4 tablet:m-8 font-bold text-base">
 			<div
 				className="font"
 				onClick={() => {
