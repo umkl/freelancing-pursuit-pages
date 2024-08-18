@@ -1,13 +1,18 @@
+"use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import tags from "@/data/tags.json";
+
 import Arrow from "@/svgs/arrow.svg";
 import { Routes } from "@/types/routes";
+import Marquee from "react-fast-marquee";
+import useViewportWidth from "@/utils/hooks/useViewportWidth";
+import TagMarquee from "@/comps/tag-marquee";
 
 export default function Home() {
 	const t = useTranslations(Routes.root);
+
 	return (
-		<section className="mx-4 bg-red-200 overflow-hidden">
+		<section className="mx-4">
 			<p className="text-lgp font-bold uppercase italic mt-2">
 				{t("greeting")}
 			</p>
@@ -40,15 +45,8 @@ export default function Home() {
 						}
 					})}
 			</p>
-			<div className="flex gap-2 mt-4">
-				{tags.map((content, key) => (
-					<div
-						key={key}
-						className="text-base font-clash font-semibold rounded-full px-4 py-1 border-[0.2rem] uppercase border-neutral-800 dark:border-neutral-200"
-					>
-						{content}
-					</div>
-				))}
+			<div className="-mx-4 mt-4">
+				<TagMarquee />
 			</div>
 			<ul className="mt-4 scale-50 w-full  origin-bottom-left">
 				{["projects", "services", "contact"].map((key) => (
