@@ -6,7 +6,7 @@ export default async function BaseLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<main>
+		<main className="flex-1 relative flex flex-col laptop:min-h-[1100px]">
 			<Adheader />
 			{children}
 		</main>

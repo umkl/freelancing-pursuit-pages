@@ -34,11 +34,10 @@ export default async function RootLayout({
 					className={cn(
 						inter.className,
 						clash.variable,
-						"min-h-screen max-w- flex flex-col"
+						"min-h-screen flex flex-col"
 					)}
 				>
 					{children}
-					<div className="flex-1"></div>
 					<ImpressumLangFooter />
 				</body>
 			</NextIntlClientProvider>
