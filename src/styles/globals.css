@@ -4,7 +4,7 @@
 
 :root {
 	@import-json '../data/sizes.json';
-	@apply bg-red-800 sm:bg-neutral-100 text-neutral-900;
+	@apply sm:bg-neutral-100 text-neutral-900;
 	font-size: 16px; /* base font-size */
 	min-width: var(--sm);
 	-webkit-font-smoothing: antialiased;

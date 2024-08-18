@@ -35,6 +35,7 @@ const config: Config = {
 				lgp: "1.75rem" /* modest headings */,
 				xl: "2rem" /* larger headings */,
 				xlp: "3rem" /* larger headings */,
+				xlpp: "3.5rem",
 				"2xl": "4rem",
 			},
 			fontWeight: {

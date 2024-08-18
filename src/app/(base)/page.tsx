@@ -7,11 +7,11 @@ import { Routes } from "@/types/routes";
 export default function Home() {
 	const t = useTranslations(Routes.root);
 	return (
-		<section className="mx-4">
+		<section className="mx-4 bg-red-200 overflow-hidden">
 			<p className="text-lgp font-bold uppercase italic mt-2">
 				{t("greeting")}
 			</p>
-			<p className="text-2xl leading-none font-clash font-bold uppercase">
+			<p className="text-xlpp md:text-2xl leading-none font-clash font-bold uppercase">
 				Michael <br /> Ungar
 			</p>
 			<ul className="text-xl leading-none font-bold mt-2">
@@ -23,7 +23,7 @@ export default function Home() {
 			</ul>
 			<p className="flex items-center gap-1 mt-2 ml-2">
 				<span className="inline-block bg-green-800 rounded-full w-2 h-2 mr-1 shrink-0"></span>
-				<span className="font-bold text-md text-nowrap">
+				<span className="font-bold text-base md:text-md text-nowrap">
 					{t("avail-status")}
 				</span>
 			</p>
