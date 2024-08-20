@@ -6,7 +6,7 @@ import Link from "next/link";
 const GobackHeader = () => {
 	const t = useTranslations(Routes.impressum);
 	return (
-		<header className="flex justify-between items-center font-inter capitalize m-4 font-bold text-base">
+		<header className="flex justify-between items-center font-inter capitalize m-4 tablet:m-8 font-bold text-base">
 			<Link href="/">{t("go-back")}</Link>
 		</header>
 	);
