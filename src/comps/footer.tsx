@@ -1,20 +1,20 @@
 "use client";
+import Link from "next/link";
 import AtFlag from "@/svgs/at-flag.svg";
-import { Routes } from "@/types/routes";
-import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import { cn } from "@/utils/cn";
 
 const ImpressumLangFooter = () => {
-	const router = useRouter();
+	const pathname = usePathname();
+	const aintAlreadyImpressum = !pathname.includes("impressum");
 	return (
-		<footer className="flex justify-between items-center font-inter capitalize m-4 tablet:m-8 font-bold text-base">
-			<div
-				className="font"
-				onClick={() => {
-					router.push(Routes.impressum);
-				}}
-			>
-				impressum
-			</div>
+		<footer
+			className={cn(
+				"flex justify-between align-bottom font-inter capitalize m-4 tablet:m-8 font-bold text-base",
+				!aintAlreadyImpressum && "flex-row-reverse"
+			)}
+		>
+			{aintAlreadyImpressum && <Link href="/impressum">impressum</Link>}
 			<AtFlag className="scale-75" />
 		</footer>
 	);

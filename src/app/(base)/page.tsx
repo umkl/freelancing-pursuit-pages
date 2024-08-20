@@ -7,6 +7,7 @@ import { Routes } from "@/types/routes";
 
 import useViewportWidth from "@/utils/hooks/useViewportWidth";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 const TagMarquee = dynamic(() => import("@/comps/tag-marquee"), { ssr: false });
 // import TagMarquee from "@/comps/tag-marquee";
 
@@ -58,10 +59,15 @@ export default function Home() {
 					{["projects", "services", "contact"].map((key) => (
 						<li
 							key={key}
-							className="text-xlp leading-none font-clash font-bold uppercase mb-4 flex items-center justify-start w-fit"
+							className="text-xlp leading-none font-clash font-bold uppercase mb-4 w-fit"
 						>
-							{t("major-links." + key)}
-							<Arrow className="inline-block ml-[9px] scale-[163%] mb-[1.8px] fill-neutral-900 dark:fill-neutral-100" />
+							<Link
+								href={"/" + key}
+								className="flex items-center justify-start"
+							>
+								{t("major-links." + key)}
+								<Arrow className="inline-block ml-[9px] scale-[163%] mb-[1.8px] fill-neutral-900 dark:fill-neutral-100" />
+							</Link>
 						</li>
 					))}
 				</ul>

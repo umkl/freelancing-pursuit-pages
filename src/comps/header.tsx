@@ -1,12 +1,13 @@
 "use client";
 import { Routes } from "@/types/routes";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const GobackHeader = () => {
 	const t = useTranslations(Routes.impressum);
 	return (
 		<header className="flex justify-between items-center font-inter capitalize m-4 font-bold text-base">
-			{t("go-back")}
+			<Link href="/">{t("go-back")}</Link>
 		</header>
 	);
 };
