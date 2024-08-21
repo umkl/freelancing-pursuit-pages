@@ -1,17 +1,25 @@
 import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
-import { getLocale, getMessages } from "next-intl/server";
+import { getMessages } from "next-intl/server";
 import ImpressumLangFooter from "@/comps/footer";
-
+import locales from "@/data/locales.json";
+import { unstable_setRequestLocale } from "next-intl/server";
 import "@/styles/globals.css";
 import { cn } from "@/utils/cn";
 import { clash, inter } from "@/fonts";
-import config from "../../tailwind.config";
+import config from "../../../tailwind.config";
 
 export const metadata: Metadata = {
 	title: "",
 	description: "",
 };
+
+export function generateStaticParams() {
+	console.log("GEEENERATING:");
+	console.log(locales);
+	console.log("---");
+	return locales.map((locale) => ({ lang: locale }));
+}
 
 export const viewport: Viewport = {
 	// themeColor: config.theme?.extend?.colors.neutral
@@ -21,14 +29,16 @@ export const viewport: Viewport = {
 
 export default async function RootLayout({
 	children,
+	params: { lang },
 }: Readonly<{
 	children: React.ReactNode;
+	params: { lang: string };
 }>) {
-	const locale = await getLocale();
+	unstable_setRequestLocale(lang);
 	const messages = await getMessages();
 
 	return (
-		<html lang={locale}>
+		<html lang={lang}>
 			<NextIntlClientProvider messages={messages}>
 				<body
 					className={cn(

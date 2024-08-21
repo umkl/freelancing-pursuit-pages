@@ -10,8 +10,10 @@
 	},
 	"dependencies": {
 		"@daltontan/postcss-import-json": "^1.1.1",
+		"@types/negotiator": "^0.6.3",
 		"classnames": "^2.5.1",
 		"gray-matter": "^4.0.3",
+		"negotiator": "^0.6.3",
 		"next": "14.2.5",
 		"next-intl": "^3.17.2",
 		"react": "^18",

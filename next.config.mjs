@@ -5,10 +5,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 const nextConfig = {
-	i18n: {
-		locales: ["de-AT"],
-		defaultLocale: "de-AT",
-	},
 	webpack: (config, { isServer }) => {
 		// Grab the existing rule that handles SVG imports
 		const fileLoaderRule = config.module.rules.find((rule) =>

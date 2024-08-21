@@ -1,4 +1,3 @@
-"use client";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -8,12 +7,13 @@ import { Routes } from "@/types/routes";
 import useViewportWidth from "@/utils/hooks/useViewportWidth";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { getLocale, unstable_setRequestLocale } from "next-intl/server";
 const TagMarquee = dynamic(() => import("@/comps/tag-marquee"), { ssr: false });
 // import TagMarquee from "@/comps/tag-marquee";
 
-export default function Home() {
+export default function Home({ params }: { params: { lang: string } }) {
+	unstable_setRequestLocale(params.lang);
 	const t = useTranslations(Routes.root);
-
 	return (
 		<section className="mx-4 tablet:mx-8 tablet:mt-4 box-border grow  h-full flex flex-col relative">
 			<div className="tablet:mx-4 tablet:mt-8 laptop:mt-4 laptop:mx-0">
