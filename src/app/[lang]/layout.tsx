@@ -15,9 +15,6 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-	console.log("GEEENERATING:");
-	console.log(locales);
-	console.log("---");
 	return locales.map((locale) => ({ lang: locale }));
 }
 

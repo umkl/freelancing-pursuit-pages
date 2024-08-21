@@ -7,7 +7,6 @@ import locales from "@/data/locales.json";
 // let languages = new Negotiator({ headers }).languages();
 // let locales = ["en-US", "nl-NL", "nl"];
 // let defaultLocale = "en-US";
-
 // match(languages, locales, defaultLocale); // -> 'en-US'
 
 export default createMiddleware({
