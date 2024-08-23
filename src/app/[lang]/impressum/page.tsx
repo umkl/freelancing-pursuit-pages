@@ -11,7 +11,7 @@ const Page = async ({ params }: { params: { lang: string } }) => {
 	);
 	return (
 		<main
-			className="md-section mx-4"
+			className="md-section mx-4 tablet:mx-8 laptop:w-[800px]"
 			dangerouslySetInnerHTML={{ __html: content }}
 		></main>
 		// <Language />

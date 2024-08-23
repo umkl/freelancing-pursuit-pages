@@ -45,6 +45,7 @@ export default async function RootLayout({
 					)}
 				>
 					{children}
+					<div className="flex-1"></div>
 					<ImpressumLangFooter />
 				</body>
 			</NextIntlClientProvider>

@@ -1,14 +1,14 @@
 # Impressum
 
-Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.
-
+Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.\
+\
 **Michael Ungar**\
 4932 Kirchheim · Österreich
-
+\
 mail: michael.ungar03@gmail.com\
 phone: 43 677 614 514 90\
-VAT No.: ATU75538946
-
+VAT No.: ATU75538946\
+\
 Unternehmensgegenstand: Erstellung, Vertrieb und Wartung von Software.
 
 # EU-Streitschlichtung
