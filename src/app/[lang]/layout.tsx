@@ -8,6 +8,7 @@ import "@/styles/globals.css";
 import { cn } from "@/utils/cn";
 import { clash, inter } from "@/fonts";
 import config from "../../../tailwind.config";
+import { Filler } from "@/comps/aids";
 
 export const metadata: Metadata = {
 	title: "",
@@ -45,7 +46,6 @@ export default async function RootLayout({
 					)}
 				>
 					{children}
-					<div className="flex-1"></div>
 					<ImpressumLangFooter />
 				</body>
 			</NextIntlClientProvider>

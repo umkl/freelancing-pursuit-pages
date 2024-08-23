@@ -11,7 +11,7 @@ export default async function BaseLayout({
 }>) {
 	unstable_setRequestLocale(params.lang);
 	return (
-		<main className="flex-1 relative flex flex-col laptop:min-h-[1100px]">
+		<main className="flex-1 relative flex flex-col laptop:min-h-[900px]">
 			<Adheader />
 			{children}
 		</main>

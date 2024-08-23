@@ -15,8 +15,8 @@ export default function Home({ params }: { params: { lang: string } }) {
 	unstable_setRequestLocale(params.lang);
 	const t = useTranslations(Routes.root);
 	return (
-		<section className="mx-4 tablet:mx-8 tablet:mt-4 box-border grow  h-full flex flex-col relative">
-			<div className="tablet:mx-4 tablet:mt-8 laptop:mt-4 laptop:mx-0">
+		<section className="mx-4 tablet:mx-8 tablet:mt-4 box-border grow h-full flex flex-col relative">
+			<div className="tablet:mx-4 tablet:mt-8 laptop:mt-4 laptop:mx-0 z-10">
 				<p className="text-lgp font-bold uppercase italic mt-2">
 					{t("greeting")}
 				</p>
@@ -38,7 +38,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 						</span>
 					</p>
 				</div>
-				<p className="text-md  tablet:text-lg font-bold italic mt-2 max-w-sm tablet:max-w-lg">
+				<p className="text-md tablet:text-lg font-bold italic mt-2 max-w-sm tablet:max-w-lg">
 					{t("mission")
 						.split(/(\[Code\]|\[Design\])/)
 						.map((part, index) => {
@@ -71,13 +71,18 @@ export default function Home({ params }: { params: { lang: string } }) {
 						</li>
 					))}
 				</ul>
-				<Image
-					className="w-full laptop:w-[70%] h-[700px] object-cover laptop:absolute bottom-0 right-0 z-0"
-					src={"/imgs/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg"}
-					alt={"Image from Gabriel Garcia Marengo of Mountains."}
-					width={"3000"}
-					height={"2400"}
-				></Image>
+				<div className="laptop:absolute w-full  laptop:w-[60%] h-[700px] bottom-0 right-0 z-0">
+					<Image
+						className="relative h-full w-full object-cover"
+						src={"/imgs/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg"}
+						alt={"Image from Gabriel Garcia Marengo of Mountains."}
+						width={"3000"}
+						height={"2400"}
+					/>
+					<div className="absolute font-black uppercase font-clash text-lg m-4 mr-8 z-10 mix-blend-difference right-0 bottom-0">
+						austria
+					</div>
+				</div>
 			</div>
 		</section>
 	);
