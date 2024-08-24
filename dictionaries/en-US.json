@@ -1,7 +1,7 @@
 {
 	"/": {
 		"ad-text": "HoL DIR DAS KOMPLETTE LANDING UPGRADE FÜR ENTSPANNTE 300€!",
-		"greeting": "Hey! My name is",
+		"greeting": "Hey! I bin da",
 		"name": "Michael Ungar",
 		"jobs": {
 			"webdev": "Web Developer",
@@ -17,5 +17,9 @@
 	},
 	"/impressum": {
 		"go-back": "Zurück"
+	},
+	"/services": {
+		"services": "Dienstleistungen",
+		"sub": "Arbeitsleistung in Produkte komprimiert"
 	}
 }
