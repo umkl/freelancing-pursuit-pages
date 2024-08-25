@@ -13,7 +13,6 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 			<h1 className="text-xl font-bold">{t("services")}</h1>
 			<p className="text-md font-bold">{t("sub")}</p>
 			<ProductOfferSection />
-			{Skill.back}
 		</main>
 	);
 };
