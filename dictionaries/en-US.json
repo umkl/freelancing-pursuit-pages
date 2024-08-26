@@ -20,6 +20,8 @@
 	},
 	"/services": {
 		"services": "Dienstleistungen",
-		"sub": "Arbeitsleistung in Produkte komprimiert"
+		"services_sub": "Arbeitsleistung in Produkte komprimiert",
+		"disciplines": "Disziplinen",
+		"disciplines_sub": "Ein kurzer Überblick über Bestandteile der Web. Ent."
 	}
 }

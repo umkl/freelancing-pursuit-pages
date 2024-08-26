@@ -6,7 +6,7 @@ import Frontend from "@/svgs/Frontend.svg";
 import UIUX from "@/svgs/UX Design.svg";
 import { Skill } from "@/types/services";
 import { cn } from "@/utils/cn";
-import "@/styles/skill.css";
+import "@/styles/svg-stylings.css";
 import Marquee from "react-fast-marquee";
 import useViewportWidth from "@/utils/hooks/useViewportWidth";
 import sizes from "@/data/sizes.json";
@@ -19,7 +19,7 @@ const SkillMarquee = ({ items }: { items: Array<Skill> }) => {
 			const Comp = renderSkill(x);
 			return (
 				<div key={i} className="h-[60px] relative stack mr-4">
-					<p className="text-nowrap text-sm text-center font-clash uppercase h-fit text-neutral-900 z-10 top-1/2 -translate-y-1/2 relative">
+					<p className="text-nowrap text-sm text-center font-clash uppercase h-fit text-neutral-900 dark:text-neutral-200 z-10 top-1/2 -translate-y-1/2 relative">
 						{x}
 					</p>
 					<div className="h-full w-[100px] relative mx-auto z-0">

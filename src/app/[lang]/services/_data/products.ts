@@ -1,3 +1,5 @@
+import { Service, Skill } from "@/types/services";
+
 export const Products: Array<Service> = [
 	{
 		name: "fad",

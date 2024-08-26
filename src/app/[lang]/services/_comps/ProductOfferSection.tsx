@@ -1,10 +1,10 @@
 const SkillMarquee = dynamic(() => import("@/comps/skill-marquee"), {
 	ssr: false,
 });
-import { Skill } from "@/types/services";
+import { Service, Skill } from "@/types/services";
 import dynamic from "next/dynamic";
 
-const ProductOfferSection = () => {
+const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 	return (
 		<article className="font-bold">
 			<h2 className="text-lg">
@@ -28,7 +28,7 @@ const ProductOfferSection = () => {
 			<p className=" mb-4">
 				#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma
 			</p>
-			<button className="border-2 border-neutral-900 rounded-full p-2 w-full mt-4">
+			<button className="border-2 border-neutral-900 dark:border-neutral-200 rounded-full p-2 w-full mt-4">
 				genauere Informationen
 			</button>
 		</article>
