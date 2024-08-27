@@ -7,6 +7,8 @@ import FancyDivider from "@/comps/dividers";
 import BlogItemsSection from "./_comps/BlogItemsSection";
 import { Blogs } from "./_data/blogs";
 import Image from "next/image";
+import TagCluster from "./_comps/TagCluster";
+import "@/styles/services-page.css";
 
 const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
@@ -14,18 +16,19 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	const t = useTranslations(Routes.services);
 	return (
 		<main className="mx-4 tablet:mx-8">
-			<h1 className="text-xl font-bold">{t("services")}</h1>
+			<h1>{t("services")}</h1>
 			<p className="text-md font-bold mb-4">{t("services_sub")}</p>
 			<ProductOfferSection services={[]} />
 			<FancyDivider />
-			<h1 className="text-xl font-bold">{t("disciplines")}</h1>
+			<h1>{t("disciplines")}</h1>
 			<p className="text-md font-bold mb-4">{t("disciplines_sub")}</p>
 			<BlogItemsSection blogs={Blogs} />
 			<FancyDivider />
-			<h1 className="text-xl font-bold">{t("disciplines")}</h1>
+			<h1>{t("disciplines")}</h1>
 			<p className="text-md font-bold mb-4">{t("disciplines_sub")}</p>
+			<TagCluster items={["nextjs", "javascript", "typescript"]} />
 			<FancyDivider />
-			<div className="grid grid-cols-2 w-fit gap-4 mx-auto my-48">
+			<div className="grid grid-cols-1 md:grid-cols-2 w-fit gap-4 mx-auto my-10 md:my-48">
 				<Image
 					src={"/imgs/illustrations/Frontend-Art-Poster.png"}
 					alt={"Frontend Illustration"}

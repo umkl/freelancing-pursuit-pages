@@ -1,0 +1,3 @@
+main > h1 {
+	@apply uppercase font-clash text-xlp leading-10 font-bold text-neutral-800;
+}
