@@ -5,7 +5,7 @@ import Frontend from "@/svgs/Frontend.svg";
 import UIUX from "@/svgs/UX Design.svg";
 import { Skill } from "@/types/services";
 
-export default function GetSvgBySkill({ skill }: { skill: Skill }) {
+export default function getSvgBySkill(skill: Skill) {
 	switch (skill) {
 		case Skill.back:
 			return <Backend />;

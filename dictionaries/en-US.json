@@ -19,9 +19,9 @@
 		"go-back": "Zurück"
 	},
 	"/services": {
-		"services": "Dienstleistungen",
-		"services_sub": "Arbeitsleistung in Produkte komprimiert",
+		"services": "Services",
+		"services_sub": "Arbeitsleistung in Produkte verpackt.",
 		"disciplines": "Disziplinen",
-		"disciplines_sub": "Ein kurzer Überblick über Bestandteile der Web. Ent."
+		"disciplines_sub": "Finde mehr über die Fachgebiete heraus."
 	}
 }

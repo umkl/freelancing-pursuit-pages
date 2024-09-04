@@ -9,6 +9,7 @@ import { Blogs } from "./_data/blogs";
 import Image from "next/image";
 import TagCluster from "./_comps/TagCluster";
 import "@/styles/services-page.css";
+import { cn } from "@/utils/cn";
 
 const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
@@ -16,19 +17,30 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	const t = useTranslations(Routes.services);
 	return (
 		<main className="mx-4 tablet:mx-8">
-			<h1>{t("services")}</h1>
-			<p className="text-md font-bold mb-4">{t("services_sub")}</p>
+			<h1 className={cn("!text-lgp", params.lang == "en-US" && "!text-xlp")}>
+				{t("services")}
+			</h1>
+			<p className="text-base font-bold leading-[120%] mt-1 mb-4 text-neutral-800 dark:text-neutral-200">
+				{t("services_sub")}
+			</p>
 			<ProductOfferSection services={[]} />
 			<FancyDivider />
-			<h1>{t("disciplines")}</h1>
-			<p className="text-md font-bold mb-4">{t("disciplines_sub")}</p>
+			<h1 className={cn("!text-xlp")}>{t("disciplines")}</h1>
+			<p className="text-base font-bold leading-[120%] mt-1 mb-4 text-neutral-800 dark:text-neutral-200">
+				{t("disciplines_sub")}
+			</p>
 			<BlogItemsSection blogs={Blogs} />
-			<FancyDivider />
-			<h1>{t("disciplines")}</h1>
-			<p className="text-md font-bold mb-4">{t("disciplines_sub")}</p>
-			<TagCluster items={["nextjs", "javascript", "typescript"]} />
-			<FancyDivider />
-			<div className="grid grid-cols-1 md:grid-cols-2 w-fit gap-4 mx-auto my-10 md:my-48">
+
+			<TagCluster
+				items={[
+					"nextjs",
+					"javascript",
+					"typescript",
+					"typescript",
+					"typescript",
+				]}
+			/>
+			<div className="grid grid-cols-1 w-full h-fit gap-4 mx-auto art-footer-parent">
 				<Image
 					src={"/imgs/illustrations/Frontend-Art-Poster.png"}
 					alt={"Frontend Illustration"}

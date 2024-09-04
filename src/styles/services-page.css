@@ -1,3 +1,7 @@
 main > h1 {
-	@apply uppercase font-clash text-xlp leading-10 font-bold text-neutral-800;
+	@apply uppercase font-clash text-xl leading-[0.8] font-extra-bold text-neutral-900 dark:text-neutral-100;
+}
+
+.art-footer-parent img {
+	@apply w-full;
 }

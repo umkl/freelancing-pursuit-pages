@@ -3,7 +3,7 @@ import { Skill } from "@/types/services";
 
 export const Blogs: Array<Blog> = [
 	{
-		name: "Frontend Development",
+		name: "Frontend Dev",
 		desc: "string",
 		link: "string",
 		skill: Skill.front,
@@ -12,7 +12,7 @@ export const Blogs: Array<Blog> = [
 		name: "UI/UX Design",
 		desc: "string",
 		link: "string",
-		skill: Skill.back,
+		skill: Skill.uiux,
 	},
 	{
 		name: "Devops",
