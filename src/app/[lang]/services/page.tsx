@@ -54,7 +54,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 					"typescript",
 				]}
 			/>
-			<div className="grid grid-cols-1 w-full h-fit gap-4 mx-auto art-footer-parent">
+			<div className="grid grid-cols-1 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0 tablet:max-w-[500px] laptop:grid-cols-4 laptop:max-w-[90%] laptop-lg:max-w-full art-footer-parent">
 				<Image
 					src={"/imgs/illustrations/Frontend-Art-Poster.png"}
 					alt={"Frontend Illustration"}
