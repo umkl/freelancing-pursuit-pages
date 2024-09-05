@@ -17,7 +17,13 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	const t = useTranslations(Routes.services);
 	return (
 		<main className="mx-4 tablet:mx-8">
-			<h1 className={cn("!text-lgp", params.lang == "en-US" && "!text-xlp")}>
+			<h1
+				className={cn(
+					"text-lgp",
+					params.lang == "en-US" && "text-xlp",
+					"md:text-xl tablet:text-xlp"
+				)}
+			>
 				{t("services")}
 			</h1>
 			<p className="text-base font-bold leading-[120%] mt-1 mb-4 text-neutral-800 dark:text-neutral-200">
@@ -25,7 +31,15 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 			</p>
 			<ProductOfferSection services={[]} />
 			<FancyDivider />
-			<h1 className={cn("!text-xlp")}>{t("disciplines")}</h1>
+			<h1
+				className={cn(
+					"text-lgp",
+					params.lang == "en-US" && "text-xlp",
+					"md:text-xl tablet:text-xlp"
+				)}
+			>
+				{t("disciplines")}
+			</h1>
 			<p className="text-base font-bold leading-[120%] mt-1 mb-4 text-neutral-800 dark:text-neutral-200">
 				{t("disciplines_sub")}
 			</p>
