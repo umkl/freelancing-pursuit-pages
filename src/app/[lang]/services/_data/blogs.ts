@@ -3,33 +3,24 @@ import { Skill } from "@/types/services";
 
 export const Blogs: Array<Blog> = [
 	{
-		name: "Frontend Dev",
-		desc: "string",
+		name: "Alles über frontend",
+		desc: "strasdfing",
 		link: "string",
-		skill: Skill.front,
+		skills: [Skill.front],
+		skillDomain: Skill.front,
 	},
 	{
-		name: "UI/UX Design",
-		desc: "string",
+		name: "bissl uiux",
+		desc: "striasdfang",
 		link: "string",
-		skill: Skill.uiux,
+		skills: [Skill.uiux],
+		skillDomain: Skill.uiux,
 	},
 	{
-		name: "Devops",
-		desc: "string",
+		name: "bissl devops",
+		desc: "joo",
 		link: "string",
-		skill: Skill.devops,
-	},
-	{
-		name: "Branding",
-		desc: "string",
-		link: "string",
-		skill: Skill.branding,
-	},
-	{
-		name: "Backend Development",
-		desc: "string",
-		link: "string",
-		skill: Skill.back,
+		skills: [Skill.devops],
+		skillDomain: Skill.devops,
 	},
 ];

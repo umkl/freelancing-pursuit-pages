@@ -10,7 +10,7 @@ const ImpressumLangFooter = () => {
 	return (
 		<footer
 			className={cn(
-				"flex justify-between align-bottom font-inter font-bold text-base m-4 tablet:m-8 capitalize",
+				"flex justify-between align-bottom font-inter font-bold text-base m-4 tablet:m-8 capitalize above-4k-style",
 				!aintAlreadyImpressum && "flex-row-reverse"
 			)}
 		>

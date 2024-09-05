@@ -4,5 +4,6 @@ export interface Blog {
 	name: string;
 	desc: string;
 	link: string;
-	skill: Skill;
+	skills: Array<Skill>;
+	skillDomain: Skill;
 }

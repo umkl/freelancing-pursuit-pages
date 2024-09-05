@@ -10,13 +10,14 @@ import Image from "next/image";
 import TagCluster from "./_comps/TagCluster";
 import "@/styles/services-page.css";
 import { cn } from "@/utils/cn";
+import { serviceProducts } from "./_data/serviceProducts";
 
 const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
 
 	const t = useTranslations(Routes.services);
 	return (
-		<main className="mx-4 tablet:mx-8">
+		<main className="mx-4 tablet:mx-8 above-4k-style">
 			<h1
 				className={cn(
 					"text-lgp",
@@ -29,7 +30,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 			<p className="text-base font-bold leading-[120%] mt-1 mb-4 text-neutral-800 dark:text-neutral-200">
 				{t("services_sub")}
 			</p>
-			<ProductOfferSection services={[]} />
+			<ProductOfferSection services={serviceProducts} />
 			<FancyDivider />
 			<h1
 				className={cn(

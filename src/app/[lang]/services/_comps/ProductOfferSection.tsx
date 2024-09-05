@@ -7,10 +7,20 @@ import BookOpen from "@/svgs/BookOpen.svg";
 
 const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 	return (
-		<article className="font-bold">
+		<div className="flex gap-8 flex-wrap">
+			{services.map((v, i) => {
+				return <ServiceProductItem key={i} />;
+			})}
+		</div>
+	);
+};
+
+const ServiceProductItem = () => {
+	return (
+		<article className="font-bold w-full tablet:w-[400px]">
 			<h2 className="mb-2">
 				{/* <span className="h-fit w-fit px-2 inline-flex justify-center items-center rounded-full bg-neutral-900">
-				</span> */}
+			</span> */}
 				<span className="text-lg font-black underline underline-offset-4 text-neutral-600 relative inline-block">
 					#1
 				</span>
