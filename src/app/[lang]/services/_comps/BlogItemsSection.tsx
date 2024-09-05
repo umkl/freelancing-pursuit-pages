@@ -17,12 +17,12 @@ const BlogItemsSection = ({ blogs }: { blogs: Array<Blog> }) => {
 		},
 		{} as GroupedBlogs
 	);
-	const sortedSkillDomains = Object.keys(groupedBlogs).sort();
+	const sortedSkillDomains = Object.keys(groupedBlogs);
 	return (
 		<section className="mt-8">
 			{sortedSkillDomains.map((skillDomain) => (
 				<div key={skillDomain}>
-					<h2>{skillDomain}</h2> {/* Skill domain heading */}
+					{/* <h2>{skillDomain}</h2> 
 					<ul>
 						{groupedBlogs[skillDomain as Skill].map((blog, i) => (
 							<li key={i}>
@@ -30,41 +30,53 @@ const BlogItemsSection = ({ blogs }: { blogs: Array<Blog> }) => {
 								<p>{blog.desc}</p>
 							</li>
 						))}
-					</ul>
+					</ul> */}
+					<BlogSection
+						skill={skillDomain as Skill}
+						items={groupedBlogs[skillDomain as Skill]}
+					/>
 				</div>
 			))}
 		</section>
 	);
 };
 
-const BlogItem = ({ item }: { item: Blog }) => {
-	const skill = getSvgBySkill(item.skillDomain);
+const BlogSection = ({
+	skill,
+	items,
+}: {
+	skill: Skill;
+	items: Array<Blog>;
+}) => {
+	const skillSvg = getSvgBySkill(skill);
 	return (
 		<div className="z-0">
 			<div className="w-full flex justify-between items-end relative">
-				<h1 className="font-bold uppercase font-clash text-xl z-20">
-					{item.name}
-				</h1>
+				<h1 className="font-bold uppercase font-clash text-xl z-20">{skill}</h1>
 				<div className="w-[180px] top-1/2 -translate-y-1/2 -translate-x-1/2 left-0 scale-75 -rotate-12 absolute z-10">
-					<skill.type
-						skill={item.skill}
+					<skillSvg.type
+						skill={skill}
 						className="w-full h-full skill-badge-svg"
 					/>
 				</div>
 
 				{/* <a className="font-bold">mehr erfahren &gt;&gt;&gt;</a> */}
 			</div>
-			<div className="z-30 mb-8">
-				<div className="p-4 rounded-lg border-2 mt-4 font-bold relative flex flex-col gap-4">
-					<div className="bg-red-200 h-[300px] relative"></div>
-					<div>
-						<p>c240820</p>
-						<p>What is Frontend Dev?</p>
-						<p>A brief exploration of the term and what it involves.</p>
-						<p>read about it &gt;&gt;&gt;</p>
+			{items.map((v, i) => {
+				return (
+					<div className="z-30 mb-8" key={i}>
+						<div className="p-4 rounded-lg border-2 mt-4 font-bold relative flex flex-col gap-4">
+							<div className="rounded-lg bg-neutral-200/30 h-[300px] relative"></div>
+							<div>
+								<p className="text-neutral-300">c240820</p>
+								<p className="text-neutral-600">{v.name}</p>
+								<p className="text-neutral-500">{v.desc}</p>
+								<p className="text-neutral-300">read about it &gt;&gt;&gt;</p>
+							</div>
+						</div>
 					</div>
-				</div>
-			</div>
+				);
+			})}
 			{/* <hr className="h-[2px] w-full bg-neutral-200 my-4" /> */}
 		</div>
 	);
