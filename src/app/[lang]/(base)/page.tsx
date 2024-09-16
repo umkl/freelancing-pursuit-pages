@@ -71,7 +71,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 						</li>
 					))}
 				</ul>
-				<div className="laptop:absolute w-full  laptop:w-[60%] h-[700px] bottom-0 right-0 z-0">
+				<div className="laptop:absolute w-full  laptop:w-[55%] h-[700px] bottom-0 right-0 z-0">
 					<Image
 						className="relative h-full w-full object-cover"
 						src={"/imgs/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg"}
