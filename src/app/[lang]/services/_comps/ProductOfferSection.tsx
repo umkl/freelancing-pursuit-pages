@@ -9,13 +9,13 @@ const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 	return (
 		<div className="flex gap-8 flex-wrap">
 			{services.map((v, i) => {
-				return <ServiceProductItem key={i} />;
+				return <ServiceProductItem key={i} service={v} />;
 			})}
 		</div>
 	);
 };
 
-const ServiceProductItem = () => {
+const ServiceProductItem = ({ service }: { service: Service }) => {
 	return (
 		<article className="font-bold w-full tablet:w-[400px]">
 			<h2 className="mb-2">
@@ -26,10 +26,10 @@ const ServiceProductItem = () => {
 				</span>
 				&nbsp;&nbsp;
 				<span className="font-black leading-tight text-lg underline underline-offset-4">
-					statische Web Entwicklung
+					{service.name}
 				</span>
 			</h2>
-			<div className="border-l-2 border-neutral-200 pl-4">
+			<div className="border-l-2 border-neutral-200 pl-4 w-fit">
 				<p className=" text-base mb-2 text-neutral-400 italic">
 					&quot;Umsetzung einer Webseite ohne dynamischen Datenverkehr&quot;
 				</p>

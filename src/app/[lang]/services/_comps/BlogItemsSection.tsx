@@ -2,6 +2,7 @@ import getSvgBySkill from "@/comps/get-svg-by-skill";
 import GetSvgBySkill from "@/comps/get-svg-by-skill";
 import { Blog } from "@/types/blogs";
 import { Skill } from "@/types/services";
+import BlogItem from "./BlogItem";
 
 const BlogItemsSection = ({ blogs }: { blogs: Array<Blog> }) => {
 	type GroupedBlogs = {
@@ -51,7 +52,7 @@ const BlogSection = ({
 	const skillSvg = getSvgBySkill(skill);
 	return (
 		<div className="z-0">
-			<div className="w-full flex justify-between items-end relative">
+			<div className="w-full flex relative">
 				<h1 className="font-bold uppercase font-clash text-xl z-20">{skill}</h1>
 				<div className="w-[180px] top-1/2 -translate-y-1/2 -translate-x-1/2 left-0 scale-75 -rotate-12 absolute z-10">
 					<skillSvg.type
@@ -62,21 +63,11 @@ const BlogSection = ({
 
 				{/* <a className="font-bold">mehr erfahren &gt;&gt;&gt;</a> */}
 			</div>
-			{items.map((v, i) => {
-				return (
-					<div className="z-30 mb-8" key={i}>
-						<div className="p-4 rounded-lg border-2 mt-4 font-bold relative flex flex-col gap-4">
-							<div className="rounded-lg bg-neutral-200/30 h-[300px] relative"></div>
-							<div>
-								<p className="text-neutral-300">c240820</p>
-								<p className="text-neutral-600">{v.name}</p>
-								<p className="text-neutral-500">{v.desc}</p>
-								<p className="text-neutral-300">read about it &gt;&gt;&gt;</p>
-							</div>
-						</div>
-					</div>
-				);
-			})}
+			<div className="grid grid-cols-1 laptop:grid-cols-2 ">
+				{items.map((v, i) => {
+					return <BlogItem key={i} blog={v} />;
+				})}
+			</div>
 			{/* <hr className="h-[2px] w-full bg-neutral-200 my-4" /> */}
 		</div>
 	);

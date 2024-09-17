@@ -2,21 +2,21 @@ import { Service, Skill } from "@/types/services";
 
 export const serviceProducts: Array<Service> = [
 	{
-		name: "fad",
+		name: "Design eines Webkonzeptes",
 		desc: "",
 		phases: [],
 		skills: Skill.uiux,
 		tags: [],
 	},
 	{
-		name: "fad",
+		name: "Entwicklung eines statischen Onepagers",
 		desc: "",
 		phases: [],
 		skills: Skill.uiux,
 		tags: [],
 	},
 	{
-		name: "fad",
+		name: "Erstellung einer Datenbank",
 		desc: "",
 		phases: [],
 		skills: Skill.uiux,

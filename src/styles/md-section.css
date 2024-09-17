@@ -3,9 +3,9 @@
 }
 
 .md-section > h1 {
-	@apply text-md text-neutral-100 font-bold;
+	@apply text-md text-neutral-900 dark:text-neutral-100 font-bold;
 }
 
 .md-section > p {
-	@apply text-base text-neutral-200;
+	@apply text-base text-neutral-800 dark:text-neutral-200;
 }
