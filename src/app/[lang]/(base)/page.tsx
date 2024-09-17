@@ -16,7 +16,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 	const t = useTranslations(Routes.root);
 	return (
 		<section className="mx-4 tablet:mx-8 tablet:mt-4 box-border grow h-full flex flex-col relative">
-			<div className="tablet:mx-4 tablet:mt-8 laptop:mt-4 laptop:mx-0 z-10">
+			<div className=" tablet:mt-8 laptop:mt-4  z-10">
 				<p className="text-lgp font-bold uppercase italic mt-2">
 					{t("greeting")}
 				</p>
@@ -71,13 +71,13 @@ export default function Home({ params }: { params: { lang: string } }) {
 						</li>
 					))}
 				</ul>
-				<div className="laptop:absolute w-full  laptop:w-[55%] h-[700px] bottom-0 right-0 z-0">
+				<div className="laptop:absolute w-full laptop:w-[55%] h-full pt-5 custombp:max-h-[500px] bottom-0 right-0 z-0">
 					<Image
-						className="relative h-full w-full object-cover"
+						className="relative h-full w-full object-cover rounded-lg"
 						src={"/imgs/gabriel-garcia-marengo-qJvpykJ5SKs-unsplash.jpg"}
 						alt={"Image from Gabriel Garcia Marengo of Mountains."}
 						width={"3000"}
-						height={"2400"}
+						height={"1000"}
 					/>
 					<div className="absolute font-black uppercase font-clash text-lg m-4 mr-8 z-10 mix-blend-difference right-0 bottom-0">
 						austria

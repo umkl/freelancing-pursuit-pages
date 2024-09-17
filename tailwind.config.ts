@@ -58,6 +58,7 @@ const config: Config = {
 			},
 			screens: {
 				...sizes,
+				custombp: { raw: "(max-height: 900px)" },
 			},
 		},
 	},
