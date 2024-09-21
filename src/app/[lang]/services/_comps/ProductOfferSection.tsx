@@ -29,7 +29,7 @@ const ServiceProductItem = ({ service }: { service: Service }) => {
 					{service.name}
 				</span>
 			</h2>
-			<div className="border-l-2 border-neutral-200 pl-4 w-fit flex-1">
+			<div className="border-l-2 border-neutral-200 pl-4 flex-1">
 				<p className=" text-base mb-2 text-neutral-400 italic">
 					&quot;Umsetzung einer Webseite ohne dynamischen Datenverkehr&quot;
 				</p>
