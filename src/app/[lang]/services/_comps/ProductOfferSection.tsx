@@ -7,7 +7,7 @@ import BookOpen from "@/svgs/BookOpen.svg";
 
 const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 	return (
-		<div className="flex gap-8 flex-wrap items-stretch bg-red-200 relative">
+		<div className="flex gap-8 flex-wrap content-stretch relative">
 			{services.map((v, i) => {
 				return <ServiceProductItem key={i} service={v} />;
 			})}
@@ -17,7 +17,7 @@ const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 
 const ServiceProductItem = ({ service }: { service: Service }) => {
 	return (
-		<article className="font-bold w-full tablet:w-[400px] h-full flex flex-col">
+		<article className="font-bold w-full tablet:w-[400px] flex flex-col">
 			<h2 className="mb-2">
 				{/* <span className="h-fit w-fit px-2 inline-flex justify-center items-center rounded-full bg-neutral-900">
 			</span> */}
@@ -45,7 +45,7 @@ const ServiceProductItem = ({ service }: { service: Service }) => {
 				<h3 className="text-md font-black leading-snug ">
 					Relevante Themen/Tools
 				</h3>
-				<p className=" mb-4">
+				<p className=" mb-4 h-fit">
 					#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma
 				</p>
 			</div>

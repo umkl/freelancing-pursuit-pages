@@ -1,4 +1,4 @@
-enum TagEnum {
+export enum TagEnum {
 	nextjs = "nextjs",
 	freelancer = "freelancer",
 	modernUx = "modern ux",

@@ -3,7 +3,7 @@ export interface Service {
 	desc: string;
 	phases: Array<Phase>;
 	skills: Skill;
-	tags: Array<Tag>;
+	tags: Array<TagEnum>;
 }
 export enum Skill {
 	uiux = "UI/UX Design",
@@ -17,10 +17,4 @@ export enum Phase {
 	design,
 	implement,
 	maintain,
-}
-export class Tag {
-	constructor(private message: string) {}
-	hash() {
-		return "#" + this.message;
-	}
 }

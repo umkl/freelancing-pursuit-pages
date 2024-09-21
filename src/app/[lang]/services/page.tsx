@@ -14,7 +14,6 @@ import { serviceProducts } from "./_data/serviceProducts";
 
 const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
-
 	const t = useTranslations(Routes.services);
 	return (
 		<main className="mx-4 tablet:mx-8 above-4k-style">
