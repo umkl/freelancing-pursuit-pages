@@ -1,11 +1,11 @@
 import { TagEnum } from "@/types/gen/tag-enum";
-import { Service, Skill } from "@/types/services";
+import { Phase, Service, Skill } from "@/types/services";
 
 export const serviceProducts: Array<Service> = [
 	{
 		name: "Entwicklung einer Weboberfläche",
 		desc: "Conception, Design & Implementation of a Product, an Idea or a Company",
-		phases: [],
+		phases: [Phase.concept, Phase.design, Phase.implement, Phase.maintain],
 		skills: Skill.uiux,
 		tags: [TagEnum.austria],
 	},

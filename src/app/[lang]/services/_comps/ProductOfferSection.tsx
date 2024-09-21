@@ -31,14 +31,13 @@ const ServiceProductItem = ({ service }: { service: Service }) => {
 			</h2>
 			<div className="border-l-2 border-neutral-200 pl-4 flex-1">
 				<p className=" text-base mb-2 text-neutral-400 italic">
-					&quot;Umsetzung einer Webseite ohne dynamischen Datenverkehr&quot;
+					&quot;{service.desc}&quot;
 				</p>
 				<h3 className="text-md font-black">4 Projektphasen</h3>
 				<ol className="list-decimal list-inside mb-4">
-					<li>Konzeption</li>
-					<li>UI/UX-Design</li>
-					<li>Umsetzung</li>
-					<li>Wartung</li>
+					{service.phases.map((v, i) => {
+						return <div key={i}>{`${i + 1}. ${v}`}</div>;
+					})}
 				</ol>
 				<h3 className="text-md font-black mb-2">Fähigkeitsbereiche</h3>
 				<SkillMarquee items={[Skill.uiux, Skill.front]} />

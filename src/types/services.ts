@@ -1,3 +1,5 @@
+import { TagEnum } from "./gen/tag-enum";
+
 export interface Service {
 	name: string;
 	desc: string;
@@ -13,8 +15,8 @@ export enum Skill {
 	branding = "Branding",
 }
 export enum Phase {
-	concept,
-	design,
-	implement,
-	maintain,
+	concept = "Konzept",
+	design = "Design",
+	implement = "Implementation",
+	maintain = "Maintain",
 }
