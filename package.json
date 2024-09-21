@@ -2,11 +2,15 @@
 	"name": "freelancing-pursuit-pages",
 	"version": "0.1.0",
 	"private": true,
+	"bin": {
+		"gen-types": "./src/utils/gen-types.js"
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"gen:types": "npm"
 	},
 	"dependencies": {
 		"@daltontan/postcss-import-json": "^1.1.1",

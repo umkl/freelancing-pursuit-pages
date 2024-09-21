@@ -7,7 +7,7 @@ import BookOpen from "@/svgs/BookOpen.svg";
 
 const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 	return (
-		<div className="flex gap-8 flex-wrap">
+		<div className="flex gap-8 flex-wrap items-stretch bg-red-200 relative">
 			{services.map((v, i) => {
 				return <ServiceProductItem key={i} service={v} />;
 			})}
@@ -17,7 +17,7 @@ const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 
 const ServiceProductItem = ({ service }: { service: Service }) => {
 	return (
-		<article className="font-bold w-full tablet:w-[400px]">
+		<article className="font-bold w-full tablet:w-[400px] h-full flex flex-col">
 			<h2 className="mb-2">
 				{/* <span className="h-fit w-fit px-2 inline-flex justify-center items-center rounded-full bg-neutral-900">
 			</span> */}
@@ -29,7 +29,7 @@ const ServiceProductItem = ({ service }: { service: Service }) => {
 					{service.name}
 				</span>
 			</h2>
-			<div className="border-l-2 border-neutral-200 pl-4 w-fit">
+			<div className="border-l-2 border-neutral-200 pl-4 w-fit flex-1">
 				<p className=" text-base mb-2 text-neutral-400 italic">
 					&quot;Umsetzung einer Webseite ohne dynamischen Datenverkehr&quot;
 				</p>

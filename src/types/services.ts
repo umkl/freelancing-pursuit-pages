@@ -19,8 +19,8 @@ export enum Phase {
 	maintain,
 }
 export class Tag {
-	name: string;
-	constructor(name: string) {
-		this.name = name;
+	constructor(private message: string) {}
+	hash() {
+		return "#" + this.message;
 	}
 }

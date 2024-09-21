@@ -38,7 +38,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 						</span>
 					</p>
 				</div>
-				<p className="text-md tablet:text-lg font-bold italic mt-2 max-w-sm tablet:max-w-lg">
+				<p className="text-md tablet:text-lg font-bold italic max-w-sm tablet:max-w-lg">
 					{t("mission")
 						.split(/(\[Code\]|\[Design\])/)
 						.map((part, index) => {
