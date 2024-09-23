@@ -4,8 +4,9 @@ export interface Service {
 	name: string;
 	desc: string;
 	phases: Array<Phase>;
-	skills: Skill;
+	skills: Array<Skill>;
 	tags: Array<TagEnum>;
+	pdfName: string;
 }
 export enum Skill {
 	uiux = "UI/UX Design",

@@ -40,17 +40,19 @@ const ServiceProductItem = ({ service }: { service: Service }) => {
 					})}
 				</ol>
 				<h3 className="text-md font-black mb-2">Fähigkeitsbereiche</h3>
-				<SkillMarquee items={[Skill.uiux, Skill.front]} />
+				<SkillMarquee items={service.skills} />
 				<h3 className="text-md font-black leading-snug ">
 					Relevante Themen/Tools
 				</h3>
 				<p className=" mb-4 h-fit">
-					#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma
+					{service.tags.map((v, i) => {
+						return <span key={i}>#v&nbsp;</span>;
+					})}
 				</p>
 			</div>
 			<button className="border-2 border-neutral-900 dark:border-neutral-200 rounded-full p-2 w-full mt-2 flex justify-center relative">
 				<BookOpen className="w-[20px] h-[20px] absolute left-4 top-1/2 -translate-y-1/2" />
-				<p className="text-center">some.pdf</p>
+				<p className="text-center">{service.pdfName}</p>
 			</button>
 		</article>
 	);

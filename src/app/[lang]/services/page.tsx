@@ -11,6 +11,7 @@ import TagCluster from "./_comps/TagCluster";
 import "@/styles/services-page.css";
 import { cn } from "@/utils/cn";
 import { serviceProducts } from "./_data/serviceProducts";
+import tagsFromJson from "@/data/tags.json";
 
 const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
@@ -45,15 +46,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 			</p>
 			<BlogItemsSection blogs={Blogs} />
 
-			<TagCluster
-				items={[
-					"nextjs",
-					"javascript",
-					"typescript",
-					"typescript",
-					"typescript",
-				]}
-			/>
+			<TagCluster items={tagsFromJson} />
 			<div className="grid grid-cols-1 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0 tablet:max-w-[500px] laptop:grid-cols-4 laptop:max-w-[90%] laptop-lg:max-w-full art-footer-parent">
 				<Image
 					src={"/imgs/illustrations/Frontend-Art-Poster.png"}
