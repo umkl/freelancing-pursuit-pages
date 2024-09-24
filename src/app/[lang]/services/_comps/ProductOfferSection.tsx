@@ -50,10 +50,13 @@ const ServiceProductItem = ({ service }: { service: Service }) => {
 					})}
 				</p>
 			</div>
-			<button className="border-2 border-neutral-900 dark:border-neutral-200 rounded-full p-2 w-full mt-2 flex justify-center relative">
+			<a
+				className="border-2 border-neutral-900 dark:border-neutral-200 rounded-full p-2 w-full mt-2 flex justify-center relative"
+				href={`/pdf/Dienstleistung_1.pdf`}
+			>
 				<BookOpen className="w-[20px] h-[20px] absolute left-4 top-1/2 -translate-y-1/2" />
 				<p className="text-center">{service.pdfName}</p>
-			</button>
+			</a>
 		</article>
 	);
 };

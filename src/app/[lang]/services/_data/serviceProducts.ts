@@ -8,7 +8,7 @@ export const serviceProducts: Array<Service> = [
 		phases: [Phase.concept, Phase.design, Phase.implement, Phase.maintain],
 		skills: [Skill.uiux, Skill.front],
 		tags: [TagEnum.nextjs],
-		pdfName: "1_Webdevelopment.jpg",
+		pdfName: "1_Webdevelopment.pdf",
 	},
 	{
 		name: "Design eines Webkonzeptes",
@@ -16,7 +16,7 @@ export const serviceProducts: Array<Service> = [
 		phases: [],
 		skills: [Skill.uiux, Skill.back],
 		tags: [TagEnum.freelancer, TagEnum.modernUx],
-		pdfName: "2_Webdevelopment.jpg",
+		pdfName: "2_Webdevelopment.pdf",
 	},
 	{
 		name: "Erstellung einer Datenbanksschnittstelle",
@@ -24,6 +24,6 @@ export const serviceProducts: Array<Service> = [
 		phases: [],
 		skills: [Skill.uiux, Skill.front],
 		tags: [TagEnum.freelancer, TagEnum.modernUx],
-		pdfName: "3_Webdevelopment.jpg",
+		pdfName: "3_Webdevelopment.pdf",
 	},
 ];
