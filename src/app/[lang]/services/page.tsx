@@ -31,7 +31,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 				{t("services_sub")}
 			</p>
 			<ProductOfferSection services={serviceProducts} />
-			<FancyDivider />
+			{/* <FancyDivider />
 			<h1
 				className={cn(
 					"text-lgp",
@@ -45,7 +45,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 				{t("disciplines_sub")}
 			</p>
 			<BlogItemsSection blogs={Blogs} />
-
+*/}
 			<TagCluster items={tagsFromJson} />
 			<div className="grid grid-cols-1 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0 tablet:max-w-[500px] laptop:grid-cols-4 laptop:max-w-[90%] laptop-lg:max-w-full art-footer-parent">
 				<Image

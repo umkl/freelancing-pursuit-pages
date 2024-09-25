@@ -17,7 +17,7 @@ const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 
 const ServiceProductItem = ({ service }: { service: Service }) => {
 	return (
-		<article className="font-bold w-full tablet:w-[400px] flex flex-col">
+		<article className="font-bold w-full tablet:w-[700px] flex flex-col">
 			<h2 className="mb-2">
 				{/* <span className="h-fit w-fit px-2 inline-flex justify-center items-center rounded-full bg-neutral-900">
 			</span> */}
@@ -44,10 +44,13 @@ const ServiceProductItem = ({ service }: { service: Service }) => {
 				<h3 className="text-md font-black leading-snug ">
 					Relevante Themen/Tools
 				</h3>
-				<p className=" mb-4 h-fit">
+				<p className="mb-4 h-fit">
 					{service.tags.map((v, i) => {
-						return <span key={i}>#v&nbsp;</span>;
+						return <span key={i}>#{v}&nbsp;</span>;
 					})}
+				</p>
+				<p className="text-neutral-500 mt-10">
+					mehr über das Angebot herausfinden:
 				</p>
 			</div>
 			<a
