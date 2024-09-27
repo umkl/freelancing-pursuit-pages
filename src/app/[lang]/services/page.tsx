@@ -17,36 +17,8 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
 	const t = useTranslations(Routes.services);
 	return (
-		<main className="mx-4 tablet:mx-8 above-4k-style">
-			<h1
-				className={cn(
-					"text-lgp",
-					params.lang == "en-US" && "text-xlp",
-					"md:text-xl tablet:text-xlp"
-				)}
-			>
-				{t("services")}
-			</h1>
-			<p className="text-base font-bold leading-[120%] mt-1 mb-4 text-neutral-800 dark:text-neutral-200">
-				{t("services_sub")}
-			</p>
-			<ProductOfferSection services={serviceProducts} />
-			{/* <FancyDivider />
-			<h1
-				className={cn(
-					"text-lgp",
-					params.lang == "en-US" && "text-xlp",
-					"md:text-xl tablet:text-xlp"
-				)}
-			>
-				{t("disciplines")}
-			</h1>
-			<p className="text-base font-bold leading-[120%] mt-1 mb-4 text-neutral-800 dark:text-neutral-200">
-				{t("disciplines_sub")}
-			</p>
-			<BlogItemsSection blogs={Blogs} />
-*/}
-			<TagCluster items={tagsFromJson} />
+		<main className="mx-4 tablet:mx-8 above-4k-style bg-red-200">
+			<h1 className="w-full text-4xl">{t("services")}</h1>
 			<div className="grid grid-cols-1 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0 tablet:max-w-[500px] laptop:grid-cols-4 laptop:max-w-[90%] laptop-lg:max-w-full art-footer-parent">
 				<Image
 					src={"/imgs/illustrations/Frontend-Art-Poster.png"}

@@ -3,4 +3,5 @@ export enum TagEnum {
 	freelancer = "freelancer",
 	modernUx = "modern ux",
 	austria = "austria",
+	reactjs = "reactjs",
 }

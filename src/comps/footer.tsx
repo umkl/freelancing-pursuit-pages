@@ -3,10 +3,13 @@ import Link from "next/link";
 import AtFlag from "@/svgs/at-flag.svg";
 import { usePathname } from "next/navigation";
 import { cn } from "@/utils/cn";
+import HeaderDe from "@/svgs/header-de.svg";
+import HeaderEn from "@/svgs/header-en.svg";
 
 const ImpressumLangFooter = () => {
 	const pathname = usePathname();
 	const aintAlreadyImpressum = !pathname.includes("impressum");
+
 	return (
 		<footer
 			className={cn(

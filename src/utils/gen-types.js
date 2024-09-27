@@ -4,7 +4,7 @@ const fs = require("fs");
 console.log(tags);
 fs.writeFileSync(
 	"./src/types/gen/tag-enum.ts",
-	`enum TagEnum {
+	`export enum TagEnum {
 	${tags
 		.map((x) => {
 			const words = x.split(" ");

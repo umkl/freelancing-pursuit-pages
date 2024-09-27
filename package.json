@@ -7,7 +7,8 @@
 	},
 	"scripts": {
 		"dev": "next dev",
-		"build": "npm link && gen-types && next build",
+		"prebuild": "node ./src/utils/gen-types.js",
+		"build": "npm run prebuild && next build",
 		"start": "next start",
 		"lint": "next lint"
 	},
