@@ -7,7 +7,7 @@
 	},
 	"scripts": {
 		"dev": "next dev",
-		"build": "gen-types && next build",
+		"build": "npm link && gen-types && next build",
 		"start": "next start",
 		"lint": "next lint"
 	},
