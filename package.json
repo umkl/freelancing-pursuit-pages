@@ -7,10 +7,9 @@
 	},
 	"scripts": {
 		"dev": "next dev",
-		"build": "next build",
+		"build": "gen-types && next build",
 		"start": "next start",
-		"lint": "next lint",
-		"gen:types": "npm"
+		"lint": "next lint"
 	},
 	"dependencies": {
 		"@daltontan/postcss-import-json": "^1.1.1",
