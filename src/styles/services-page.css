@@ -5,3 +5,7 @@ main > h1 {
 .art-footer-parent img {
 	@apply w-full;
 }
+
+.header-text-style > path {
+	@apply bg-slate-800 w-full;
+}
