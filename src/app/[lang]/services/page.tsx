@@ -13,13 +13,18 @@ import { cn } from "@/utils/cn";
 import { serviceProducts } from "./_data/serviceProducts";
 import tagsFromJson from "@/data/tags.json";
 import HeaderDe from "@/svgs/header-de.svg";
+import GobackHeader from "@/comps/header";
 
 const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
 	const t = useTranslations(Routes.services);
 	return (
 		<main className="mx-4 tablet:mx-8 above-4k-style relative">
-			<section className="h-screen ">
+			<section className="h-screen  relative">
+				<div className="-mx-8">
+					<GobackHeader />
+				</div>
+
 				<div className="sticky top-[2rem]">
 					<svg
 						className="hidden h-auto w-full md:block mb-8"
@@ -63,10 +68,20 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 					</div>
 					<div className="h-[2rem]"></div>
 				</div>
+				<div>
+					<p>
+						Sick of thinking about font sizes and marketing to the right
+						audience?
+					</p>
+				</div>
 			</section>
+			<div className=" flex w-full justify-between bottom-[2rem] my-8 sticky top-[2rem]">
+				<p className="font-bold">Was darf’s denn sein?</p>
+				<p className="font-bold">DIENSTLEISTUNGEN</p>
+			</div>
 			<div>
 				<section
-					className="h-screen rounded-2xl border bg-neutral-800 border-neutral-100 -mx-8 sticky px-8 mb-[20rem]"
+					className="h-screen rounded-2xl border bg-neutral-200 dark:bg-neutral-800 border-neutral-100 -mx-8 sticky px-8 mb-[20rem]"
 					style={{ top: "calc(20vh)" }}
 				>
 					<div>
@@ -83,7 +98,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 					</div>
 				</section>
 				<section
-					className="h-screen rounded-2xl border px-8 border-neutral-100 bg-neutral-800 -mx-8 sticky top-[10rem] mb-[10rem]"
+					className="h-screen rounded-2xl border px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-800 -mx-8 sticky top-[10rem] mb-[10rem]"
 					style={{ top: "calc(20vh + 10rem)" }}
 				>
 					<div>
@@ -100,7 +115,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 					</div>
 				</section>
 				<section
-					className="h-screen rounded-2xl border px-8 border-neutral-100 bg-neutral-800 -mx-8 sticky top-[20rem] mb-[0rem]"
+					className="h-screen rounded-2xl border px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-800 -mx-8 sticky top-[20rem] mb-[0rem]"
 					style={{ top: "calc(20vh +20rem)" }}
 				>
 					<div>

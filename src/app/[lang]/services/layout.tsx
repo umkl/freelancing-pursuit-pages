@@ -12,9 +12,8 @@ export default async function ServicesLayout({
 	unstable_setRequestLocale(params.lang);
 	return (
 		<>
-			<GobackHeader />
 			{children}
-			<Filler />
+			{/* <Filler /> */}
 		</>
 	);
 }
