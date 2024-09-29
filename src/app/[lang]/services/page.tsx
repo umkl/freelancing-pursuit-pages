@@ -14,14 +14,19 @@ import { serviceProducts } from "./_data/serviceProducts";
 import tagsFromJson from "@/data/tags.json";
 import HeaderDe from "@/svgs/header-de.svg";
 import GobackHeader from "@/comps/header";
+import Marquee from "react-fast-marquee";
+import dynamic from "next/dynamic";
+const ImageMarquee = dynamic(() => import("@/comps/image-marquee"), {
+	ssr: false,
+});
 
 const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
 	const t = useTranslations(Routes.services);
 	return (
-		<main className="mx-4 tablet:mx-8 above-4k-style relative">
-			<section className="h-screen  relative">
-				<div className="-mx-8">
+		<main className="mx-4 tablet:mx-8 above-4k-style relative ">
+			<section className="h-screen relative -mt-8">
+				<div className="-mx-8 mt-16">
 					<GobackHeader />
 				</div>
 
@@ -40,52 +45,78 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 							className="fill-neutral-900 dark:fill-neutral-100"
 						/>
 					</svg>
-					<div className="grid grid-cols-1 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0  laptop:grid-cols-4  laptop-lg:max-w-full art-footer-parent">
-						<Image
-							src={"/imgs/illustrations/Frontend-Art-Poster.png"}
-							alt={"Frontend Illustration"}
-							width={300}
-							height={300}
-						/>
-						<Image
-							src={"/imgs/illustrations/Backend-Art-Poster.png"}
-							alt={"Backend Illustration"}
-							width={300}
-							height={300}
-						/>
-						<Image
-							src={"/imgs/illustrations/Brand-Art-Poster.png"}
-							alt={"Brand Illustration"}
-							width={300}
-							height={300}
-						/>
-						<Image
-							src={"/imgs/illustrations/UX-Art-Poster.png"}
-							alt={"UX Illustration"}
-							width={300}
-							height={300}
-						/>
-					</div>
+					{/* <div className="grid grid-cols-4 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0  laptop:grid-cols-4  laptop-lg:max-w-full art-footer-parent">
+					<Marquee></Marquee>
+					</div> */}
+					<ImageMarquee />
+					{/* <div className="grid grid-cols-4 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0  laptop:grid-cols-4  laptop-lg:max-w-full art-footer-parent"> */}
+
+					{/* </div> */}
 					<div className="h-[2rem]"></div>
 				</div>
-				<div>
-					<p>
+				<div className="h-[40vh] flex justify-center items-center">
+					<h1 className="font-bold text-center text-lgp max-w-[400px] ">
 						Sick of thinking about font sizes and marketing to the right
 						audience?
-					</p>
+					</h1>
 				</div>
 			</section>
-			<div className=" flex w-full justify-between bottom-[2rem] my-8 sticky top-[2rem]">
-				<p className="font-bold">Was darf’s denn sein?</p>
+			<div className=" flex w-full justify-between my-8 sticky items-end bottom-[3rem] top-[2rem]">
+				<p className="font-bold text-2xl">Was darf’s denn sein?</p>
 				<p className="font-bold">DIENSTLEISTUNGEN</p>
 			</div>
 			<div>
 				<section
-					className="h-screen rounded-2xl border bg-neutral-200 dark:bg-neutral-800 border-neutral-100 -mx-8 sticky px-8 mb-[20rem]"
-					style={{ top: "calc(20vh)" }}
+					className="h-[70vh] rounded-2xl px-8 bg-neutral-200 dark:bg-neutral-900 -mx-8 sticky mb-[20rem]"
+					style={{ top: "calc(10vh + 3rem)" }}
 				>
 					<div>
-						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[5rem] uppercase py-4  ">
+						<hr />
+						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[3rem] uppercase py-4 ">
+							Web Development
+						</h2>
+						<p className="w-[700px]">
+							A website developed to captivate and convert can elevate your
+							brand to new heights. My custom-coded sites are meticulously
+							crafted to reflect your unique identity, delivering seamless
+							experiences with a focus on animation—keeping your audience
+							engaged and returning.
+						</p>
+					</div>
+					<div className="absolute w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0 bg-red-800">
+						<p>(1)</p>
+						<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
+					</div>
+				</section>
+				<section
+					className="h-[70vh] rounded-2xl px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-900 -mx-8 sticky mt-[-20rem] mb-[10rem]"
+					style={{ top: "calc(10vh + 10rem)" }}
+				>
+					<div>
+						<hr />
+						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[3rem] uppercase py-4 ">
+							Web Development
+						</h2>
+						<p className="w-[700px]">
+							A website developed to captivate and convert can elevate your
+							brand to new heights. My custom-coded sites are meticulously
+							crafted to reflect your unique identity, delivering seamless
+							experiences with a focus on animation—keeping your audience
+							engaged and returning.
+						</p>
+					</div>
+					<div className="absolute w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0 bg-red-800">
+						<p>(1)</p>
+						<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
+					</div>
+				</section>
+				<section
+					className="h-[70vh] rounded-2xl px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-900 -mx-8 sticky mb-[0rem] mt-[-10rem]"
+					style={{ top: "calc(10vh + 20rem)" }}
+				>
+					<div>
+						<hr />
+						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[3rem] uppercase py-4 ">
 							Web Development
 						</h2>
 						<p>
@@ -96,43 +127,12 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 							engaged and returning.
 						</p>
 					</div>
-				</section>
-				<section
-					className="h-screen rounded-2xl border px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-800 -mx-8 sticky top-[10rem] mb-[10rem]"
-					style={{ top: "calc(20vh + 10rem)" }}
-				>
-					<div>
-						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[5rem] uppercase py-4 ">
-							Web Development
-						</h2>
-						<p>
-							A website developed to captivate and convert can elevate your
-							brand to new heights. My custom-coded sites are meticulously
-							crafted to reflect your unique identity, delivering seamless
-							experiences with a focus on animation—keeping your audience
-							engaged and returning.
-						</p>
-					</div>
-				</section>
-				<section
-					className="h-screen rounded-2xl border px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-800 -mx-8 sticky top-[20rem] mb-[0rem]"
-					style={{ top: "calc(20vh +20rem)" }}
-				>
-					<div>
-						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[5rem] uppercase py-4 ">
-							Web Development
-						</h2>
-						<p>
-							A website developed to captivate and convert can elevate your
-							brand to new heights. My custom-coded sites are meticulously
-							crafted to reflect your unique identity, delivering seamless
-							experiences with a focus on animation—keeping your audience
-							engaged and returning.
-						</p>
+					<div className="absolute w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0 bg-red-800">
+						<p>(1)</p>
+						<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
 					</div>
 				</section>
 			</div>
-			<div className="h-[300px]"></div>
 		</main>
 	);
 };
