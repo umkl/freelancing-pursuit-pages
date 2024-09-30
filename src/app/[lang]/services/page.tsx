@@ -15,6 +15,11 @@ import tagsFromJson from "@/data/tags.json";
 import HeaderDe from "@/svgs/header-de.svg";
 import GobackHeader from "@/comps/header";
 import Marquee from "react-fast-marquee";
+import Backend from "@/svgs/Backend.svg";
+import Branding from "@/svgs/Branding.svg";
+import Devops from "@/svgs/Devops.svg";
+import Frontend from "@/svgs/Frontend.svg";
+import UIUX from "@/svgs/UX Design.svg";
 import dynamic from "next/dynamic";
 const ImageMarquee = dynamic(() => import("@/comps/image-marquee"), {
 	ssr: false,
@@ -24,15 +29,15 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
 	const t = useTranslations(Routes.services);
 	return (
-		<main className="mx-4 tablet:mx-8 above-4k-style relative ">
-			<section className="h-screen relative -mt-8">
-				<div className="-mx-8 mt-16">
+		<main className="mx-4 tablet:mx-8 above-4k-style relative">
+			<section className="h-screen relative -mt-8 flex flex-col min-h-[20rem] ">
+				<div className="-mx-4 mt-8">
 					<GobackHeader />
 				</div>
 
 				<div className="sticky top-[2rem]">
 					<svg
-						className="hidden h-auto w-full md:block mb-8"
+						className=" h-auto w-full block mb-4"
 						width="934"
 						height="63"
 						viewBox="0 0 934 63"
@@ -54,87 +59,61 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 					{/* </div> */}
 					<div className="h-[2rem]"></div>
 				</div>
-				<div className="h-[40vh] flex justify-center items-center">
-					<h1 className="font-bold text-center text-lgp max-w-[400px] ">
+				<div className="flex-1 flex justify-center">
+					<h1 className="font-bold text-center text-lgp max-w-[400px]">
 						Sick of thinking about font sizes and marketing to the right
 						audience?
 					</h1>
 				</div>
 			</section>
-			<div className=" flex w-full justify-between my-8 sticky items-end bottom-[3rem] top-[2rem]">
-				<p className="font-bold text-2xl">Was darf’s denn sein?</p>
-				<p className="font-bold">DIENSTLEISTUNGEN</p>
+			<div className=" flex justify-between sticky items-end bottom-[1rem] top-[1rem]">
+				<p className="font-bold text-base ">How can I help you?</p>
+				<p className="font-bold hidden">DIENSTLEISTUNGEN</p>
 			</div>
-			<div>
-				<section
-					className="h-[70vh] rounded-2xl px-8 bg-neutral-200 dark:bg-neutral-900 -mx-8 sticky mb-[20rem]"
-					style={{ top: "calc(10vh + 3rem)" }}
-				>
-					<div>
-						<hr />
-						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[3rem] uppercase py-4 ">
-							Web Development
-						</h2>
-						<p className="w-[700px]">
-							A website developed to captivate and convert can elevate your
-							brand to new heights. My custom-coded sites are meticulously
-							crafted to reflect your unique identity, delivering seamless
-							experiences with a focus on animation—keeping your audience
-							engaged and returning.
-						</p>
-					</div>
-					<div className="absolute w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0 bg-red-800">
-						<p>(1)</p>
-						<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
-					</div>
-				</section>
-				<section
-					className="h-[70vh] rounded-2xl px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-900 -mx-8 sticky mt-[-20rem] mb-[10rem]"
-					style={{ top: "calc(10vh + 10rem)" }}
-				>
-					<div>
-						<hr />
-						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[3rem] uppercase py-4 ">
-							Web Development
-						</h2>
-						<p className="w-[700px]">
-							A website developed to captivate and convert can elevate your
-							brand to new heights. My custom-coded sites are meticulously
-							crafted to reflect your unique identity, delivering seamless
-							experiences with a focus on animation—keeping your audience
-							engaged and returning.
-						</p>
-					</div>
-					<div className="absolute w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0 bg-red-800">
-						<p>(1)</p>
-						<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
-					</div>
-				</section>
-				<section
-					className="h-[70vh] rounded-2xl px-8 border-neutral-100 bg-neutral-200 dark:bg-neutral-900 -mx-8 sticky mb-[0rem] mt-[-10rem]"
-					style={{ top: "calc(10vh + 20rem)" }}
-				>
-					<div>
-						<hr />
-						<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-[3rem] uppercase py-4 ">
-							Web Development
-						</h2>
-						<p>
-							A website developed to captivate and convert can elevate your
-							brand to new heights. My custom-coded sites are meticulously
-							crafted to reflect your unique identity, delivering seamless
-							experiences with a focus on animation—keeping your audience
-							engaged and returning.
-						</p>
-					</div>
-					<div className="absolute w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0 bg-red-800">
-						<p>(1)</p>
-						<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
-					</div>
-				</section>
-			</div>
+			<ServiceSection marginBottom={"8rem"} topOnSticky={"calc(10vh)"} />
+			<ServiceSection marginBottom={"4rem"} topOnSticky={"calc(10vh + 4rem)"} />
+			<ServiceSection marginBottom={"0rem"} topOnSticky={"calc(10vh + 8rem)"} />
+			<div className="h-[10rem]"></div>
 		</main>
 	);
 };
 
 export default ServicesPage;
+
+const ServiceSection = ({
+	marginBottom,
+	topOnSticky,
+}: {
+	marginBottom: string;
+	topOnSticky: string;
+}) => {
+	return (
+		<section
+			className={cn("w-full bg-neutral-100 dark:bg-neutral-900 sticky mt-4")}
+			style={{ top: topOnSticky, marginBottom: marginBottom }}
+		>
+			<hr className="border-neutral-500" />
+			<div className="">
+				<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-md md:text-lg lg:text-[3rem] uppercase py-4">
+					(01) Web Development
+				</h2>
+			</div>
+			<p className="max-w-[700px]">
+				A website is one of the easiest and most customizable ways to grab
+				people’s attention. I can equip your domain with a performance-optimized
+				web space that keeps users coming back because of an enhanced experience
+				through motion design and interactive elements. With seamless navigation
+				and engaging visuals, your site will leave a lasting impression and help
+				build stronger connections with your audience.
+			</p>
+			<br />
+			<h2 className="font-bold text-base">CMS Integration</h2>
+			<h2 className="font-bold text-base">Animations & Motion Design</h2>
+			<h2 className="font-bold text-base">Static/Server-side Rendering</h2>
+			<div className="relative w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0">
+				<p className="hidden">( 1 )</p>
+				<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
+			</div>
+		</section>
+	);
+};

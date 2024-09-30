@@ -36,7 +36,7 @@ const ImageMarquee = () => {
 
 	const Component = isSmall ? Marquee : "div";
 	return (
-		<div className={cn(isSmall ? "-mx-4 " : "mx-0")}>
+		<div className={cn(isSmall ? "-mx-4" : "mx-0")}>
 			<Component className={cn("flex mt-4 gap-4 relative w-fill")}>
 				<div className="flex gap-4">{content}</div>
 			</Component>
