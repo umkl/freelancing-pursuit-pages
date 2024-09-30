@@ -29,7 +29,7 @@ export default function ContactPage() {
 				next step :
 			</div> */}
 				<div className="relative w-fit mx-auto ">
-					<div className="h-full w-full absolute bg-gradient-to-t from-neutral-100/100 via-20% via-neutral-100/20 to-30% to-neutral-200/0 z-40"></div>
+					{/* <div className="h-full w-full absolute bg-gradient-to-t from-neutral-100/100 via-20% via-neutral-100/20 to-30% to-neutral-200/0 z-40"></div> */}
 					<Image
 						src={"/imgs/matrix.png"}
 						className="z-10"
@@ -37,28 +37,30 @@ export default function ContactPage() {
 						width={800}
 						height={900}
 					/>
-					<button className="bottom-[20%] left-2 absolute flex gap-4 justify-center border-[0.2rem] border-neutral-500/30 ring-1 ring-neutral-400/30 items-center bg-neutral-700/60 backdrop-blur-sm text-neutral-200 text-base p-2 md:p-4 rounded-lg font-bold z-30 text-nowrap">
-						<div className="button-bg-glow button-bg-red"></div>
-						<svg
-							width="22"
-							height="16"
-							viewBox="0 0 22 16"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								stroke=""
-								className="stroke-neutral-200"
-								d="M14.75 6.5L19.47 1.78C19.5749 1.67524 19.7085 1.60392 19.8539 1.57503C19.9993 1.54615 20.15 1.561 20.2869 1.61771C20.4239 1.67442 20.541 1.77045 20.6234 1.89367C20.7058 2.01688 20.7499 2.16176 20.75 2.31V13.69C20.7499 13.8382 20.7058 13.9831 20.6234 14.1063C20.541 14.2295 20.4239 14.3256 20.2869 14.3823C20.15 14.439 19.9993 14.4538 19.8539 14.425C19.7085 14.3961 19.5749 14.3248 19.47 14.22L14.75 9.5M3.5 14.75H12.5C13.0967 14.75 13.669 14.5129 14.091 14.091C14.5129 13.669 14.75 13.0967 14.75 12.5V3.5C14.75 2.90326 14.5129 2.33097 14.091 1.90901C13.669 1.48705 13.0967 1.25 12.5 1.25H3.5C2.90326 1.25 2.33097 1.48705 1.90901 1.90901C1.48705 2.33097 1.25 2.90326 1.25 3.5V12.5C1.25 13.0967 1.48705 13.669 1.90901 14.091C2.33097 14.5129 2.90326 14.75 3.5 14.75Z"
-								stroke-width="1.5"
-								stroke-linecap="round"
-								stroke-linejoin="round"
-							/>
-						</svg>
-						book a call
-					</button>
+					<a href="https://calendly.com/umkl/talk">
+						<button className="bottom-[20%] left-2 cursor-pointer absolute flex gap-4 justify-center border-[0.2rem] border-neutral-500/30 ring-1 ring-neutral-400/30 items-center bg-neutral-700/60 backdrop-blur-sm text-neutral-200 text-base p-2 md:p-4 rounded-lg font-bold text-nowrap z-50">
+							<div className="button-bg-glow button-bg-red"></div>
+							<svg
+								width="22"
+								height="16"
+								viewBox="0 0 22 16"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									stroke=""
+									className="stroke-neutral-200"
+									d="M14.75 6.5L19.47 1.78C19.5749 1.67524 19.7085 1.60392 19.8539 1.57503C19.9993 1.54615 20.15 1.561 20.2869 1.61771C20.4239 1.67442 20.541 1.77045 20.6234 1.89367C20.7058 2.01688 20.7499 2.16176 20.75 2.31V13.69C20.7499 13.8382 20.7058 13.9831 20.6234 14.1063C20.541 14.2295 20.4239 14.3256 20.2869 14.3823C20.15 14.439 19.9993 14.4538 19.8539 14.425C19.7085 14.3961 19.5749 14.3248 19.47 14.22L14.75 9.5M3.5 14.75H12.5C13.0967 14.75 13.669 14.5129 14.091 14.091C14.5129 13.669 14.75 13.0967 14.75 12.5V3.5C14.75 2.90326 14.5129 2.33097 14.091 1.90901C13.669 1.48705 13.0967 1.25 12.5 1.25H3.5C2.90326 1.25 2.33097 1.48705 1.90901 1.90901C1.48705 2.33097 1.25 2.90326 1.25 3.5V12.5C1.25 13.0967 1.48705 13.669 1.90901 14.091C2.33097 14.5129 2.90326 14.75 3.5 14.75Z"
+									stroke-width="1.5"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								/>
+							</svg>
+							book a call
+						</button>
+					</a>
 					<a href="https://google.com">
-						<button className="bottom-[20%] right-2 absolute flex gap-4 justify-center items-center bg-neutral-700/60 border-[0.2rem] border-neutral-500/30 ring-1 ring-neutral-400/30 z-30 backdrop-blur-sm text-neutral-200 text-base p-2 md:p-4 rounded-lg font-bold z-20 text-nowrap">
+						<button className="bottom-[20%] cursor-pointer right-2 absolute flex gap-4 justify-center items-center bg-neutral-700/60 border-[0.2rem] border-neutral-500/30 ring-1 ring-neutral-400/30 z-30 backdrop-blur-sm text-neutral-200 text-base p-2 md:p-4 rounded-lg font-bold z-20 text-nowrap">
 							<div className="button-bg-glow button-bg-blue"></div>
 							<svg
 								width="22"
@@ -81,9 +83,11 @@ export default function ContactPage() {
 				</div>
 				<p className="text-center mx-auto font-bold text-lg tablet:mt-[4rem] mt-[1.4rem]">
 					See new creations on{" "}
-					<span className="bg-gradient-to-r from-[#F5BE5B] h-[40px] underline to-[#FF1BCA] bg-clip-text text-transparent">
-						Instagram
-					</span>
+					<a href="https://www.instagram.com/umkvenz">
+						<span className="bg-gradient-to-r from-[#F5BE5B] h-[40px] underline to-[#FF1BCA] bg-clip-text text-transparent">
+							Instagram
+						</span>
+					</a>
 					.
 				</p>
 			</div>

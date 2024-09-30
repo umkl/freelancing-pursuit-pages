@@ -78,29 +78,47 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 				topOnSticky={"calc(10vh)"}
 				heading="Web Development"
 				num={1}
-				text="af"
-				topics={["adsf", "adsf"]}
-				tags={[TagEnum.austria, TagEnum.freelancer, TagEnum.nextjs]}
+				text="A website is one of the easiest and most customizable ways to grab people’s attention. I can equip your domain with a performance-optimized web space that keeps users coming back because of an enhanced experience through motion design and interactive elements. With seamless navigation and engaging visuals, your site will leave a lasting impression and help build stronger connections with your audience."
+				topics={[
+					"CMS Integration",
+					"Animations & Motion Design",
+					"Static/Server-Side Rendering",
+				]}
+				tags={[
+					TagEnum.html,
+					TagEnum.css,
+					TagEnum.javascript,
+					TagEnum.tailwind,
+					TagEnum.typescript,
+				]}
 			/>
 			<ServiceSection
 				marginBottom={"4rem"}
 				topOnSticky={"calc(10vh + 4rem)"}
 				heading="UI/UX Design"
 				num={2}
-				text="af"
-				topics={["adsf", "adsf"]}
-				tags={[TagEnum.austria, TagEnum.freelancer, TagEnum.nextjs]}
+				text="A thoughtfully designed user interface can transform the way users interact with your brand. My UI/UX designs are crafted to provide intuitive, seamless experiences that not only capture attention but also guide users effortlessly through your site. With a focus on user-centric design, functionality, and aesthetic appeal, I ensure that every interaction is meaningful, keeping users engaged and encouraging return visits. Elevate your digital presence with a design that’s not just beautiful, but also highly functional."
+				topics={["Responsive Design Systems", "Wireframing", "UX Writing "]}
+				tags={[
+					TagEnum.responsivedesign,
+					TagEnum.interactiondesign,
+					TagEnum.uxresearch,
+				]}
 			/>
 			<ServiceSection
 				marginBottom={"0rem"}
 				topOnSticky={"calc(10vh + 8rem)"}
 				heading="SEO"
 				num={3}
-				text="af"
-				topics={["adsf", "adsf"]}
-				tags={[TagEnum.austria, TagEnum.freelancer, TagEnum.nextjs]}
+				text="A well-optimized website designed to drive traffic and boost conversions can significantly enhance your brand’s online presence. My custom-coded sites are built with SEO in mind, ensuring search engines recognize your site’s value while delivering a user experience tailored to your unique identity. With clean code, fast loading times, and SEO best practices, your site will not only rank higher but also keep visitors engaged, helping you convert traffic into loyal customers."
+				topics={[
+					"Keyword Optimizations",
+					"Performance Monitoring",
+					"Technical SEO",
+				]}
+				tags={[TagEnum.onpageseo, TagEnum.technicalseo, TagEnum.offpageseo]}
 			/>
-			<div className="h-[10rem]"></div>
+			<div className="h-[10rem] tablet:h-[30rem]"></div>
 		</main>
 	);
 };

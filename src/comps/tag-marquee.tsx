@@ -1,15 +1,21 @@
 "use client";
-import tags from "@/data/tags.json";
+
 import useViewportWidth from "@/utils/hooks/useViewportWidth";
 import Marquee from "react-fast-marquee";
 import sizes from "@/data/sizes.json";
 import { cn } from "@/utils/cn";
+import { TagEnum } from "@/types/gen/tag-enum";
 
 const TagMarquee = () => {
 	const width = useViewportWidth();
 	const isSmall = width < parseInt(sizes.tablet, 10);
 	const content = [...Array(isSmall ? 4 : 1)].flatMap((_, i) => {
-		return tags.map((content, key) => {
+		return [
+			TagEnum.austria,
+			TagEnum.freelancer,
+			TagEnum.modernUx,
+			TagEnum.nextjs,
+		].map((content, key) => {
 			return (
 				<div
 					key={`${i}-${key}-${content}`}
