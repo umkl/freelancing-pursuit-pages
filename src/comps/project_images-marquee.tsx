@@ -23,6 +23,7 @@ const ProjectImagesMarquee = () => {
 				{featured_projects.map((x) => {
 					return (
 						<Image
+							key={x}
 							src={`/imgs/project-imgs/${x}.png`}
 							style={{
 								width: "auto",
