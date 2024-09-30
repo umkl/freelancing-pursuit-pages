@@ -19,7 +19,7 @@ const ImageMarquee = () => {
 		return imageLinkArray.map((content, key) => {
 			// className="text-base font-clash font-bold rounded-full text-nowrap px-4 py-1 border-[0.2rem] uppercase border-neutral-800 dark:border-neutral-200 mr-2"
 			return (
-				<div className={cn(isSmall ? "" : " w-full h-fit")}>
+				<div key={key} className={cn(isSmall ? "" : " w-full h-fit")}>
 					<Image
 						src={content}
 						width={1000}

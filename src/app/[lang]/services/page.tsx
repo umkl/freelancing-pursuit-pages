@@ -137,14 +137,18 @@ const ServiceSection = ({
 			</div>
 			<p className="max-w-[700px]">{text}</p>
 			<br />
-			{topics.map((name) => {
-				return <h2 className="font-bold text-base">{name}</h2>;
+			{topics.map((name, i) => {
+				return (
+					<h2 key={i} className="font-bold text-base">
+						{name}
+					</h2>
+				);
 			})}
 			<div className="relative w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0">
 				<p className="hidden">( 1 )</p>
 				<p>
-					{tags.map((tag) => {
-						return <span>#{tag}&nbsp;</span>;
+					{tags.map((tag, key) => {
+						return <span key={key}>#{tag}&nbsp;</span>;
 					})}
 				</p>
 			</div>
