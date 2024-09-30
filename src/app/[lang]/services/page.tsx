@@ -60,14 +60,14 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 					<div className="h-[2rem]"></div>
 				</div>
 				<div className="flex-1 flex justify-center">
-					<h1 className="font-bold text-center text-lgp max-w-[400px]">
+					<h1 className="font-extrabold text-center text-lgp max-w-[400px] italic uppercase">
 						Sick of thinking about font sizes and marketing to the right
 						audience?
 					</h1>
 				</div>
 			</section>
 			<div className=" flex justify-between sticky items-end bottom-[1rem] top-[1rem]">
-				<p className="font-bold text-base ">How can I help you?</p>
+				<p className="font-bold text-base ">I can help you.</p>
 				<p className="font-bold hidden">DIENSTLEISTUNGEN</p>
 			</div>
 			<ServiceSection marginBottom={"8rem"} topOnSticky={"calc(10vh)"} />
@@ -95,7 +95,8 @@ const ServiceSection = ({
 			<hr className="border-neutral-500" />
 			<div className="">
 				<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-md md:text-lg lg:text-[3rem] uppercase py-4">
-					(01) Web Development
+					<span className="text-neutral-300">(01)</span>&nbsp;&nbsp;Web
+					Development
 				</h2>
 			</div>
 			<p className="max-w-[700px]">
