@@ -21,6 +21,7 @@ import Devops from "@/svgs/Devops.svg";
 import Frontend from "@/svgs/Frontend.svg";
 import UIUX from "@/svgs/UX Design.svg";
 import dynamic from "next/dynamic";
+import { TagEnum } from "@/types/gen/tag-enum";
 const ImageMarquee = dynamic(() => import("@/comps/image-marquee"), {
 	ssr: false,
 });
@@ -29,7 +30,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 	unstable_setRequestLocale(params.lang);
 	const t = useTranslations(Routes.services);
 	return (
-		<main className="mx-4 tablet:mx-8 above-4k-style relative">
+		<main className="px-4 above-4k-style relative w-full">
 			<section className="h-screen relative -mt-8 flex flex-col min-h-[20rem] ">
 				<div className="-mx-4 mt-8">
 					<GobackHeader />
@@ -57,22 +58,48 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 					{/* <div className="grid grid-cols-4 w-full h-fit gap-4 mx-auto tablet:ml-auto tablet:mr-0  laptop:grid-cols-4  laptop-lg:max-w-full art-footer-parent"> */}
 
 					{/* </div> */}
-					<div className="h-[2rem]"></div>
+					<div className="h-[1rem]"></div>
 				</div>
 				<div className="flex-1 flex justify-center">
-					<h1 className="font-extrabold text-center text-lgp max-w-[400px] italic uppercase">
+					<h1 className="font-bold tablet:text-center text-lgp max-w-[500px] italic leading-7 uppercase">
 						Sick of thinking about font sizes and marketing to the right
 						audience?
 					</h1>
 				</div>
 			</section>
 			<div className=" flex justify-between sticky items-end bottom-[1rem] top-[1rem]">
-				<p className="font-bold text-base ">I can help you.</p>
+				<p className="font-bold text-base tablet:px-4 tablet:py-2">
+					I can help you.
+				</p>
 				<p className="font-bold hidden">DIENSTLEISTUNGEN</p>
 			</div>
-			<ServiceSection marginBottom={"8rem"} topOnSticky={"calc(10vh)"} />
-			<ServiceSection marginBottom={"4rem"} topOnSticky={"calc(10vh + 4rem)"} />
-			<ServiceSection marginBottom={"0rem"} topOnSticky={"calc(10vh + 8rem)"} />
+			<ServiceSection
+				marginBottom={"8rem"}
+				topOnSticky={"calc(10vh)"}
+				heading="Web Development"
+				num={1}
+				text="af"
+				topics={["adsf", "adsf"]}
+				tags={[TagEnum.austria, TagEnum.freelancer, TagEnum.nextjs]}
+			/>
+			<ServiceSection
+				marginBottom={"4rem"}
+				topOnSticky={"calc(10vh + 4rem)"}
+				heading="UI/UX Design"
+				num={2}
+				text="af"
+				topics={["adsf", "adsf"]}
+				tags={[TagEnum.austria, TagEnum.freelancer, TagEnum.nextjs]}
+			/>
+			<ServiceSection
+				marginBottom={"0rem"}
+				topOnSticky={"calc(10vh + 8rem)"}
+				heading="SEO"
+				num={3}
+				text="af"
+				topics={["adsf", "adsf"]}
+				tags={[TagEnum.austria, TagEnum.freelancer, TagEnum.nextjs]}
+			/>
 			<div className="h-[10rem]"></div>
 		</main>
 	);
@@ -83,9 +110,19 @@ export default ServicesPage;
 const ServiceSection = ({
 	marginBottom,
 	topOnSticky,
+	heading,
+	num,
+	text,
+	topics,
+	tags,
 }: {
 	marginBottom: string;
 	topOnSticky: string;
+	heading: string;
+	num: number;
+	text: string;
+	topics: string[];
+	tags: TagEnum[];
 }) => {
 	return (
 		<section
@@ -95,25 +132,21 @@ const ServiceSection = ({
 			<hr className="border-neutral-500" />
 			<div className="">
 				<h2 className="font-clash font-bold text-neutral-800 dark:text-neutral-200 text-md md:text-lg lg:text-[3rem] uppercase py-4">
-					<span className="text-neutral-300">(01)</span>&nbsp;&nbsp;Web
-					Development
+					<span className="text-neutral-300">({num})</span>&nbsp;&nbsp;{heading}
 				</h2>
 			</div>
-			<p className="max-w-[700px]">
-				A website is one of the easiest and most customizable ways to grab
-				people’s attention. I can equip your domain with a performance-optimized
-				web space that keeps users coming back because of an enhanced experience
-				through motion design and interactive elements. With seamless navigation
-				and engaging visuals, your site will leave a lasting impression and help
-				build stronger connections with your audience.
-			</p>
+			<p className="max-w-[700px]">{text}</p>
 			<br />
-			<h2 className="font-bold text-base">CMS Integration</h2>
-			<h2 className="font-bold text-base">Animations & Motion Design</h2>
-			<h2 className="font-bold text-base">Static/Server-side Rendering</h2>
+			{topics.map((name) => {
+				return <h2 className="font-bold text-base">{name}</h2>;
+			})}
 			<div className="relative w-full -mx-8 px-8 flex justify-between font-bold py-8 bottom-0">
 				<p className="hidden">( 1 )</p>
-				<p>#HTML #CSS #TailwindCSS #JS #ReactJS #NextJS #Vercel #Figma</p>
+				<p>
+					{tags.map((tag) => {
+						return <span>#{tag}&nbsp;</span>;
+					})}
+				</p>
 			</div>
 		</section>
 	);

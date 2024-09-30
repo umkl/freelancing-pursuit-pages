@@ -12,7 +12,7 @@ export default async function BaseLayout({
 	unstable_setRequestLocale(params.lang);
 	return (
 		<main className="flex-1 relative overflow-hidden flex flex-col laptop:min-h-[700px]">
-			<GobackHeader />
+			<GobackHeader title={"/projects"} />
 			{children}
 		</main>
 	);
