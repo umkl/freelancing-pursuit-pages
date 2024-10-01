@@ -16,12 +16,12 @@ export default createMiddleware({
 
 export const config = {
 	matcher: [
-		// "/",
-		// "/(de|en)/:path*",
-		// "/impressum",
-		// "/services",
-		// "/contact",
-		// "/projects",
-		"/((?!_next).*)",
+		"/",
+		"/(de|en)/:path*",
+		"/impressum",
+		"/services",
+		"/contact",
+		"/projects",
+		// "/((?!_next).*)",
 	],
 };
