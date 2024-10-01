@@ -7,11 +7,31 @@ import { cn } from "@/utils/cn";
 import HeaderDe from "@/svgs/header-de.svg";
 import HeaderEn from "@/svgs/header-en.svg";
 import { useLocale } from "next-intl";
+import locales from "@/data/locales.json";
+import { useRouter } from "next/navigation";
 
 const ImpressumLangFooter = () => {
 	const pathname = usePathname();
 	const aintAlreadyImpressum = !pathname.includes("impressum");
 	const locale = useLocale();
+	const router = useRouter();
+
+	const handleLocaleChange = (locale: string) => {
+		// Split the pathname to replace the current locale
+		const parts = pathname.split("/");
+
+		// Check if the first part of the path is a locale and replace it
+		// Adjust the index based on your URL structure
+		if (parts.length > 1) {
+			parts[1] = locale; // Replace the locale part with the new locale
+		}
+
+		// Construct the new pathname
+		const newPathname = parts.join("/");
+
+		// Update the URL with the new locale, keeping query parameters intact
+		router.push(newPathname + window.location.search);
+	};
 
 	return (
 		<footer
@@ -22,9 +42,19 @@ const ImpressumLangFooter = () => {
 		>
 			{aintAlreadyImpressum && <Link href="/impressum">impressum</Link>}
 			{locale == "en-US" ? (
-				<EnFlag className="scale-75" />
+				<button
+					onClick={() => handleLocaleChange(locales[1])}
+					className="appearance-none"
+				>
+					<EnFlag className="scale-75" />
+				</button>
 			) : (
-				<AtFlag className="scale-75" />
+				<button
+					className="appearance-none"
+					onClick={() => handleLocaleChange(locales[0])}
+				>
+					<AtFlag className="scale-75" />
+				</button>
 			)}
 		</footer>
 	);

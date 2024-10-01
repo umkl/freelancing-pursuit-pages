@@ -22,9 +22,20 @@
 		"contact": "Kontakt"
 	},
 	"/services": {
-		"services": "Dienstleistungen",
-		"services_sub": "Arbeitsleistung in Produkte komprimiert",
+		"services": "Dienstleistungen, die ich anbiete",
+		"services_sub": "Arbeiten verpackt in Produkte.",
 		"disciplines": "Disziplinen",
-		"disciplines_sub": "Ein kurzer Überblick über Bestandteile der Web. Ent."
+		"disciplines_sub": "Erfahren Sie mehr über die Fachgebiete.",
+		"sick": "Müde vom Nachdenken über Schriftgrößen und Marketing für die richtige Zielgruppe?",
+		"i-help": "Ich kann Ihnen helfen."
+	},
+	"/projects": {
+		"empty": "ziemlich leer",
+		"fix": "lass uns das beheben",
+		"contact": "kontakt",
+		"projectname": "Projektname",
+		"description": "Beschreibung",
+		"client": "Kunde",
+		"release-date": "Veröffentlichungsdatum"
 	}
 }
