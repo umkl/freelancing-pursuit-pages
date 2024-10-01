@@ -8,7 +8,7 @@ const GobackHeader = ({ title }: { title?: string }) => {
 	return (
 		<header className="flex justify-between items-center font-inter capitalize m-4 tablet:m-8 font-bold text-base above-4k-style">
 			<Link href="/">{t("go-back")}</Link>
-			{title && <p>{title}</p>}
+			{title && <p>{t(title)}</p>}
 		</header>
 	);
 };

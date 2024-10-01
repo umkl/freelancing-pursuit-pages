@@ -16,7 +16,10 @@
 		}
 	},
 	"/impressum": {
-		"go-back": "Zurück"
+		"go-back": "Zurück",
+		"projects": "Projekte",
+		"services": "Dienstleistungen",
+		"contact": "Kontakt"
 	},
 	"/services": {
 		"services": "Dienstleistungen",

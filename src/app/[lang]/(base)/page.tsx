@@ -25,9 +25,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 	return (
 		<section className="mx-4 tablet:mx-8 tablet:mt-4 box-border grow h-full flex flex-col relative">
 			<div className=" tablet:mt-8 laptop:mt-4  z-10">
-				<p className="text-lgp font-bold uppercase italic mt-2">
-					{t("greeting")}
-				</p>
+				<p className="text-lgp font-bold mt-2">{t("greeting")}</p>
 				<p className="text-xlpp md:text-2xl leading-none font-clash font-bold uppercase">
 					Michael <br className="tablet:hidden" /> Ungar
 				</p>
@@ -79,7 +77,7 @@ export default function Home({ params }: { params: { lang: string } }) {
 						</li>
 					))}
 				</ul>
-				<div className="laptop:absolute w-full laptop:w-[55%] h-fit mt-5 pt-5 custombp:max-h-[500px] bottom-0 right-0 z-0 overflow-hidden bg-neutral-200 rounded-lg">
+				<div className="laptop:absolute w-full laptop:w-[55%] h-fit mt-5 pt-5 custombp:max-h-[500px] bottom-0 right-0 z-0 overflow-hidden bg-neutral-200 dark:bg-neutral-800 rounded-lg">
 					<ProjectImagesMarquee />
 					<div className="absolute font-black uppercase font-clash text-lg m-4 mr-8 z-10 mix-blend-difference right-0 bottom-0">
 						@UMKL

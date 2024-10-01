@@ -94,7 +94,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 			/>
 			<ServiceSection
 				marginBottom={"4rem"}
-				topOnSticky={"calc(10vh + 4rem)"}
+				topOnSticky={"calc(10vh + 6rem)"}
 				heading="UI/UX Design"
 				num={2}
 				text="A thoughtfully designed user interface can transform the way users interact with your brand. My UI/UX designs are crafted to provide intuitive, seamless experiences that not only capture attention but also guide users effortlessly through your site. With a focus on user-centric design, functionality, and aesthetic appeal, I ensure that every interaction is meaningful, keeping users engaged and encouraging return visits. Elevate your digital presence with a design that’s not just beautiful, but also highly functional."
@@ -107,7 +107,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 			/>
 			<ServiceSection
 				marginBottom={"0rem"}
-				topOnSticky={"calc(10vh + 8rem)"}
+				topOnSticky={"calc(10vh + 12rem)"}
 				heading="SEO"
 				num={3}
 				text="A well-optimized website designed to drive traffic and boost conversions can significantly enhance your brand’s online presence. My custom-coded sites are built with SEO in mind, ensuring search engines recognize your site’s value while delivering a user experience tailored to your unique identity. With clean code, fast loading times, and SEO best practices, your site will not only rank higher but also keep visitors engaged, helping you convert traffic into loyal customers."
@@ -118,7 +118,7 @@ const ServicesPage = ({ params }: { params: { lang: string } }) => {
 				]}
 				tags={[TagEnum.onpageseo, TagEnum.technicalseo, TagEnum.offpageseo]}
 			/>
-			<div className="h-[10rem] tablet:h-[30rem]"></div>
+			<div className="h-[10rem] tablet:h-[80rem]"></div>
 		</main>
 	);
 };

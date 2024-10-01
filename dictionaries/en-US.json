@@ -1,27 +1,39 @@
 {
 	"/": {
-		"ad-text": "HoL DIR DAS KOMPLETTE LANDING UPGRADE FÜR ENTSPANNTE 300€!",
-		"greeting": "Hey! I bin da",
+		"ad-text": "GET THE COMPLETE LANDING UPGRADE FOR A RELAXED €300!",
+		"greeting": "Hey, my name is",
 		"name": "Michael Ungar",
 		"jobs": {
 			"webdev": "Web Developer",
 			"ux": "UX Designer"
 		},
-		"avail-status": "Verfügbar für neue Projekte",
-		"mission": "Mit [Code] & [Design] versuche ich die digitale Welt sukzessive schöner zu machen.",
+		"avail-status": "Available for new projects",
+		"mission": "With [Code] & [Design], I try to make the digital world more beautiful.",
 		"major-links": {
-			"projects": "Projekte",
-			"services": "Dienstleistungen",
-			"contact": "Kontakt"
+			"projects": "Projects",
+			"services": "Services",
+			"contact": "Contact"
 		}
 	},
 	"/impressum": {
-		"go-back": "Zurück"
+		"go-back": "Go back",
+		"projects": "Projects",
+		"services": "Services",
+		"contact": "Contact"
 	},
 	"/services": {
-		"services": "Services i provide",
-		"services_sub": "Arbeitsleistung in Produkte verpackt.",
-		"disciplines": "Disziplinen",
-		"disciplines_sub": "Finde mehr über die Fachgebiete heraus."
+		"services": "Services I provide",
+		"services_sub": "Work packaged into products.",
+		"disciplines": "Disciplines",
+		"disciplines_sub": "Find out more about the areas of expertise."
+	},
+	"/projects": {
+		"empty": "pretty empty",
+		"fix": "let's get that fixed",
+		"contact": "contact",
+		"projectname": "projectname",
+		"description": "description",
+		"client": "client",
+		"release-date": "release date"
 	}
 }
