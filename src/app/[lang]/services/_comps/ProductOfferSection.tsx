@@ -1,11 +1,15 @@
 const SkillMarquee = dynamic(() => import("@/comps/skill-marquee"), {
 	ssr: false,
 });
-import { Service, Skill } from "@/types/services";
+import { ServiceProduct, Skill } from "@/types/services";
 import dynamic from "next/dynamic";
 import BookOpen from "@/svgs/BookOpen.svg";
 
-const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
+const ProductOfferSection = ({
+	services,
+}: {
+	services: Array<ServiceProduct>;
+}) => {
 	return (
 		<div className="flex gap-8 flex-wrap content-stretch relative">
 			{services.map((v, i) => {
@@ -15,7 +19,7 @@ const ProductOfferSection = ({ services }: { services: Array<Service> }) => {
 	);
 };
 
-const ServiceProductItem = ({ service }: { service: Service }) => {
+const ServiceProductItem = ({ service }: { service: ServiceProduct }) => {
 	return (
 		<article className="font-bold w-full tablet:w-[700px] flex flex-col">
 			<h2 className="mb-2">

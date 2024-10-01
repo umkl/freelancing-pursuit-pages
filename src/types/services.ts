@@ -1,6 +1,6 @@
 import { TagEnum } from "./gen/tag-enum";
 
-export interface Service {
+export interface ServiceProduct {
 	name: string;
 	desc: string;
 	phases: Array<Phase>;
@@ -20,4 +20,12 @@ export enum Phase {
 	design = "Design",
 	implement = "Implementation",
 	maintain = "Maintain",
+}
+
+export interface Service {
+	name: string;
+	num: number;
+	description: string;
+	subitems: Array<string>;
+	tags: Array<TagEnum>;
 }

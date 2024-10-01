@@ -25,7 +25,9 @@
 		"services": "Services I provide",
 		"services_sub": "Work packaged into products.",
 		"disciplines": "Disciplines",
-		"disciplines_sub": "Find out more about the areas of expertise."
+		"disciplines_sub": "Find out more about the areas of expertise.",
+		"sick": "Sick of thinking about font sizes and marketing to the right audience?",
+		"i-help": "I can help you."
 	},
 	"/projects": {
 		"empty": "pretty empty",

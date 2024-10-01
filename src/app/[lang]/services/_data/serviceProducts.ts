@@ -1,7 +1,7 @@
 import { TagEnum } from "@/types/gen/tag-enum";
-import { Phase, Service, Skill } from "@/types/services";
+import { Phase, ServiceProduct, Skill } from "@/types/services";
 
-export const serviceProducts: Array<Service> = [
+export const serviceProducts: Array<ServiceProduct> = [
 	{
 		name: "Entwicklung einer zeitgerechten Weboberfläche",
 		desc: "Conception, Design & Implementation of a Product, an Idea or a Company",
