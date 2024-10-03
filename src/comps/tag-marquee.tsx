@@ -11,10 +11,10 @@ const TagMarquee = () => {
 	const isSmall = width < parseInt(sizes.tablet, 10);
 	const content = [...Array(isSmall ? 4 : 1)].flatMap((_, i) => {
 		return [
-			TagEnum.austria,
 			TagEnum.freelancer,
-			TagEnum.modernUx,
 			TagEnum.nextjs,
+			TagEnum.modernUx,
+			TagEnum.austria,
 		].map((content, key) => {
 			return (
 				<div
