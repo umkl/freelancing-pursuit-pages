@@ -1,7 +1,7 @@
 "use client";
+import { Link } from "@/i18n/routing";
 import { Routes } from "@/types/routes";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 
 const GobackHeader = ({ title }: { title?: string }) => {
 	const t = useTranslations(Routes.impressum);

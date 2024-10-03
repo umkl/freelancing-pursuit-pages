@@ -1,8 +1,9 @@
 "use client";
-import Link from "next/link";
+
 import "@/styles/projects-page.css";
 import { useTranslations } from "next-intl";
 import { Routes } from "@/types/routes";
+import { Link } from "@/i18n/routing";
 
 const ProjectsPage = ({ params }: { params: { lang: string } }) => {
 	const t = useTranslations(Routes.projects);

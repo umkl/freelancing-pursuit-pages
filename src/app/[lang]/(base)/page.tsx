@@ -6,9 +6,10 @@ import { Routes } from "@/types/routes";
 
 import useViewportWidth from "@/utils/hooks/useViewportWidth";
 import dynamic from "next/dynamic";
-import Link from "next/link";
+
 import { getLocale, unstable_setRequestLocale } from "next-intl/server";
 import Marquee from "react-fast-marquee";
+import { Link } from "@/i18n/routing";
 const TagMarquee = dynamic(() => import("@/comps/tag-marquee"), { ssr: false });
 // import TagMarquee from "@/comps/tag-marquee";
 const ProjectImagesMarquee = dynamic(
