@@ -37,5 +37,11 @@
 		"description": "Beschreibung",
 		"client": "Kunde",
 		"release-date": "Veröffentlichungsdatum"
+	},
+	"/contact": {
+		"ready": "Bist du bereit, ein Publikum zu erreichen?",
+		"new": "Entdecke meine neuesten Kreationen auf",
+		"call": "Buche einen Anruf",
+		"message": "Schreibe mir"
 	}
 }

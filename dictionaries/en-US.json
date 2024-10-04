@@ -37,5 +37,11 @@
 		"description": "description",
 		"client": "client",
 		"release-date": "release date"
+	},
+	"/contact": {
+		"ready": "Are you ready for reaching an audience?",
+		"new": "See new creations on",
+		"call": "book a call",
+		"message": "message me"
 	}
 }
