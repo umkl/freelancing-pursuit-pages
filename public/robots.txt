@@ -1,5 +1,4 @@
-User-agent: *
-Disallow: /accounts
-
-User-agent: *
+User-Agent: *
 Allow: /
+
+Sitemap: https://www.ungarmichael.at/sitemap.xml

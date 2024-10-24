@@ -10,6 +10,7 @@ import dynamic from "next/dynamic";
 import { getLocale, unstable_setRequestLocale } from "next-intl/server";
 import Marquee from "react-fast-marquee";
 import { Link } from "@/i18n/routing";
+import { Metadata } from "next";
 const TagMarquee = dynamic(() => import("@/comps/tag-marquee"), { ssr: false });
 // import TagMarquee from "@/comps/tag-marquee";
 const ProjectImagesMarquee = dynamic(
@@ -18,6 +19,15 @@ const ProjectImagesMarquee = dynamic(
 		ssr: false,
 	}
 );
+
+export const metadata: Metadata = {
+	title: "Webdeveloper / UI+UX Designer - Michael Ungar",
+	description: "",
+	openGraph: {
+		title: "Webdeveloper / UI+UX Designer - Michael Ungar",
+		images: ["/imgs/og-image.jpg"],
+	},
+};
 
 export default function Home({ params }: { params: { lang: string } }) {
 	unstable_setRequestLocale(params.lang);

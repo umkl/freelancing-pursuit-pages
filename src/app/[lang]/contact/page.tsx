@@ -5,6 +5,15 @@ import Mail from "@/svgs/mail.svg";
 import Camera from "@/svgs/camera.svg";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Webdeveloper / UI+UX Designer - Michael Ungar - Contact Page",
+	description: "",
+	openGraph: {
+		title: "Webdeveloper / UI+UX Designer - Michael Ungar - Contact Page",
+	},
+};
 
 export default function ContactPage() {
 	const t = useTranslations("/contact");
@@ -77,7 +86,7 @@ export default function ContactPage() {
 							{t("call")}
 						</button>
 					</a>
-					<a href="https://google.com">
+					<a href="mailto:">
 						<button className="bottom-[20%] cursor-pointer right-2 absolute flex gap-4 justify-center items-center bg-neutral-700/60 border-[0.2rem] border-neutral-500/30 ring-1 ring-neutral-400/30 backdrop-blur-sm text-neutral-200 text-base p-2 md:p-4 rounded-lg font-bold z-20 text-nowrap">
 							<div className="button-bg-glow button-bg-blue"></div>
 							<svg
