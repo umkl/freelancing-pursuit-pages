@@ -2,6 +2,16 @@ import GobackHeader, { Adheader } from "@/comps/header";
 import { getLocale, unstable_setRequestLocale } from "next-intl/server";
 // import {unstable_setRequestLocale} from 'next-intl/server';
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Webdeveloper / UI+UX Designer - Michael Ungar - Contact Page",
+	description: "",
+	openGraph: {
+		title: "Webdeveloper / UI+UX Designer - Michael Ungar - Contact Page",
+	},
+};
+
 export default async function BaseLayout({
 	children,
 	params,
